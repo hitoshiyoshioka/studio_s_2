@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動画編集のご依頼 | 吉岡ひとし</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0b1f3a;
+  --navy-mid: #163158;
+  --navy-light: #1e4080;
+  --blue: #2563eb;
+  --blue-light: #60a5fa;
+  --pale: #f0f5ff;
+  --pale-mid: #dce8ff;
+  --white: #ffffff;
+  --ink: #0f172a;
+  --ink-mid: #334155;
+  --ink-light: #64748b;
+  --ink-pale: #94a3b8;
+  --green: #16a34a;
+  --green-pale: #dcfce7;
+  --gold: #f0c040;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--white);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+
+/* ── UTIL ── */
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+.tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px}
+.tag--light{background:rgba(147,197,253,.18);color:#93c5fd;border:1px solid rgba(147,197,253,.3)}
+.tag--blue{background:var(--pale-mid);color:var(--blue);border:1px solid rgba(37,99,235,.2)}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.rule{width:36px;height:2.5px;background:linear-gradient(90deg,var(--blue),transparent);border-radius:2px;margin-bottom:22px}
+.sec-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4.5vw,32px);font-weight:500;line-height:1.5;color:var(--navy);margin-bottom:14px}
+.sec-lead{font-size:14.5px;color:var(--ink-mid);line-height:1.95;margin-bottom:36px}
+.sec{padding:76px 22px}
+
+/* ── CTA BUTTON ── */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;padding:16px 36px;border-radius:50px;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.btn--primary{background:linear-gradient(135deg,var(--blue),#1d4ed8);color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.38)}
+.btn--primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,99,235,.5)}
+.btn--ghost{background:var(--white);color:var(--blue);border:1.5px solid var(--blue)}
+.btn--ghost:hover{transform:translateY(-2px);background:var(--pale)}
+.btn-group{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   01 HERO
+━━━━━━━━━━━━━━━━━━━━━ */
+.hero{
+  background:linear-gradient(150deg,#04111f 0%,#0b2045 50%,#163158 100%);
+  padding:96px 22px 80px;text-align:center;position:relative;overflow:hidden
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 55% at 18% 28%,rgba(37,99,235,.2) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 40% at 82% 72%,rgba(96,165,250,.1) 0%,transparent 55%);
+}
+/* subtle grid lines */
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.hero-kicker{margin-bottom:24px}
+.hero h1{
+  font-family:'Noto Serif JP',serif;font-size:clamp(24px,5.5vw,46px);
+  color:#fff;line-height:1.5;font-weight:500;margin-bottom:22px
+}
+.hero h1 em{color:var(--blue-light);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.72);font-size:15px;max-width:500px;margin:0 auto 40px;line-height:1.95}
+.hero-note{margin-top:16px;font-size:11.5px;color:rgba(255,255,255,.32);letter-spacing:.04em}
+
+/* film-reel deco */
+.hero-deco{margin:0 auto 40px;display:block}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   02 TRUST BAR (numbers)
+━━━━━━━━━━━━━━━━━━━━━ */
+.trust-bar{background:var(--pale);border-top:1px solid var(--pale-mid);border-bottom:1px solid var(--pale-mid);padding:32px 22px}
+.trust-bar-inner{max-width:780px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.trust-item{text-align:center;position:relative}
+.trust-item+.trust-item::before{content:'';position:absolute;left:0;top:10%;height:80%;width:1px;background:var(--pale-mid)}
+.trust-num{font-family:'Noto Serif JP',serif;font-size:clamp(28px,5vw,38px);font-weight:500;color:var(--blue);line-height:1}
+.trust-num sup{font-size:55%;vertical-align:super}
+.trust-num sub{font-size:45%;vertical-align:baseline;font-family:'Noto Sans JP',sans-serif;font-weight:500}
+.trust-label{font-size:12px;color:var(--ink-light);margin-top:6px;letter-spacing:.04em}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   03 TROUBLE
+━━━━━━━━━━━━━━━━━━━━━ */
+.trouble-sec{background:var(--white)}
+.trouble-grid{display:grid;gap:12px}
+.trouble-card{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:20px;border-radius:14px;
+  background:var(--pale);border:1px solid var(--pale-mid)
+}
+.trouble-card-icon{
+  width:44px;height:44px;border-radius:10px;flex-shrink:0;
+  background:var(--white);border:1px solid var(--pale-mid);
+  display:flex;align-items:center;justify-content:center
+}
+.trouble-card h4{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.trouble-card p{font-size:13px;color:var(--ink-mid);line-height:1.75}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   04 RESULTS (before/after)
+━━━━━━━━━━━━━━━━━━━━━ */
+.results-sec{background:linear-gradient(160deg,#05111f,#0f2a4a)}
+.results-sec .eyebrow{color:var(--blue-light)}
+.results-sec .sec-title{color:#fff}
+.results-sec .sec-lead{color:rgba(255,255,255,.62)}
+.result-cards{display:grid;gap:20px}
+.result-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(147,197,253,.2);
+  border-radius:18px;overflow:hidden;
+  backdrop-filter:blur(6px)
+}
+.result-head{
+  background:rgba(255,255,255,.08);padding:16px 20px;
+  display:flex;align-items:center;gap:14px;
+  border-bottom:1px solid rgba(147,197,253,.15)
+}
+.result-avatar{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  background:rgba(147,197,253,.15);border:1px solid rgba(147,197,253,.35);
+  display:flex;align-items:center;justify-content:center
+}
+.result-head-name{color:#fff;font-size:14px;font-weight:700}
+.result-head-type{color:rgba(255,255,255,.5);font-size:11.5px;margin-top:2px}
+.result-body{padding:20px}
+.result-row{display:grid;grid-template-columns:1fr 28px 1fr;gap:10px;align-items:center;margin-bottom:16px}
+.result-box{background:rgba(255,255,255,.07);border-radius:10px;padding:14px;text-align:center}
+.result-box.after{background:rgba(22,163,74,.15);border:1px solid rgba(22,163,74,.3)}
+.result-box-label{font-size:10px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.38);margin-bottom:6px;text-transform:uppercase}
+.result-box.after .result-box-label{color:rgba(134,239,172,.7)}
+.result-val{font-family:'Noto Serif JP',serif;font-size:clamp(18px,3.5vw,22px);font-weight:500;color:#fff;line-height:1.2}
+.result-val small{font-size:12px;font-weight:400;color:rgba(255,255,255,.45);font-family:'Noto Sans JP',sans-serif;display:block;margin-top:3px}
+.result-box.after .result-val{color:#86efac}
+.result-arrow{display:flex;align-items:center;justify-content:center}
+/* mini bar chart */
+.result-chart{display:flex;align-items:flex-end;gap:5px;height:52px;padding:0 2px;margin-bottom:14px}
+.result-bar{flex:1;border-radius:3px 3px 0 0}
+.result-comment{font-size:13px;color:rgba(255,255,255,.62);line-height:1.8;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   05 TESTIMONIALS
+━━━━━━━━━━━━━━━━━━━━━ */
+.testi-sec{background:var(--pale)}
+.testi-grid{display:grid;gap:16px}
+.testi-card{
+  background:var(--white);border-radius:14px;padding:22px;
+  border:1px solid var(--pale-mid);position:relative
+}
+.testi-quote{
+  font-size:13.5px;color:var(--ink-mid);line-height:1.85;
+  margin-bottom:14px;padding-left:20px;position:relative
+}
+.testi-quote::before{
+  content:'"';position:absolute;left:0;top:-6px;
+  font-size:36px;color:var(--pale-mid);font-family:serif;line-height:1
+}
+.testi-quote strong{color:var(--navy);font-weight:700}
+.testi-meta{display:flex;align-items:center;gap:10px}
+.testi-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.testi-label{font-size:11.5px;color:var(--ink-pale);font-weight:500}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   06 FEATURES (why choose)
+━━━━━━━━━━━━━━━━━━━━━ */
+.features-sec{background:var(--white)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:16px}
+.feature-card{
+  padding:26px 20px;border-radius:16px;
+  background:var(--pale);border:1px solid var(--pale-mid);
+  text-align:center;transition:transform .2s,box-shadow .2s
+}
+.feature-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(37,99,235,.1)}
+.feature-pt{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--blue-light);margin-bottom:12px;text-transform:uppercase}
+.feature-icon{margin:0 auto 12px;display:block}
+.feature-card h3{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.feature-card p{font-size:12.5px;color:var(--ink-mid);line-height:1.75}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   07 ABOUT / PROFILE
+━━━━━━━━━━━━━━━━━━━━━ */
+.about-sec{background:var(--pale)}
+.about-card{
+  background:var(--white);border-radius:22px;overflow:hidden;
+  box-shadow:0 4px 28px rgba(37,99,235,.08)
+}
+.about-head{
+  background:linear-gradient(135deg,#04111f,#163158);
+  padding:32px;display:flex;align-items:center;gap:22px;flex-wrap:wrap
+}
+.about-photo{
+  width:86px;height:86px;border-radius:50%;flex-shrink:0;
+  border:3px solid rgba(147,197,253,.4);overflow:hidden;
+  background:var(--navy-mid)
+}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.about-name{font-family:'Noto Serif JP',serif;font-size:21px;font-weight:500;color:#fff}
+.about-handle{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:5px}
+.about-body{padding:28px 30px}
+.about-body p{font-size:14px;color:var(--ink-mid);line-height:2;margin-bottom:18px}
+.about-body p:last-of-type{margin-bottom:0}
+.about-stats{display:flex;gap:28px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--pale-mid)}
+.about-stat-num{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:500;color:var(--blue);line-height:1}
+.about-stat-label{font-size:11.5px;color:var(--ink-pale);margin-top:4px}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   08 PRICING
+━━━━━━━━━━━━━━━━━━━━━ */
+.pricing-sec{background:var(--white)}
+.pcat{margin-bottom:56px}
+.pcat:last-child{margin-bottom:0}
+.pcat-head{display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:14px 14px 0 0;margin-bottom:0}
+.pcat-head--tate{background:linear-gradient(135deg,#1e3a5f,#2563eb)}
+.pcat-head--yoko{background:linear-gradient(135deg,#0f3460,#1a4080)}
+.pcat-head--opt{background:linear-gradient(135deg,#1a2f4a,#334155)}
+.pcat-icon{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center}
+.pcat-head-text h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:3px;font-family:'Noto Serif JP',serif}
+.pcat-head-text p{font-size:12px;color:rgba(255,255,255,.62);letter-spacing:.04em}
+.ptab-wrap{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--pale-mid);border-top:none;border-bottom:none;overflow:hidden}
+.ptab{padding:11px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer;user-select:none;background:var(--pale);color:var(--ink-pale);border-bottom:2px solid var(--pale-mid);transition:background .15s,color .15s}
+.ptab.active{background:var(--white);color:var(--blue);border-bottom:2px solid var(--blue)}
+.ptab-panel{display:none;border:1px solid var(--pale-mid);border-top:none;border-radius:0 0 14px 14px;padding:18px;background:var(--white)}
+.ptab-panel.active{display:block}
+.pcards{display:grid;gap:12px}
+.pcards--2{grid-template-columns:1fr 1fr}
+.pcards--3{grid-template-columns:repeat(3,1fr)}
+.pcard{border-radius:12px;padding:18px 16px;position:relative;border:1.5px solid var(--pale-mid);background:var(--pale);transition:transform .18s,box-shadow .18s}
+.pcard:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,99,235,.1)}
+.pcard.featured{background:var(--white);border-color:var(--blue);box-shadow:0 4px 18px rgba(37,99,235,.12)}
+.pcard-badge{position:absolute;top:-11px;left:14px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 12px;border-radius:20px}
+.pcard-label{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--ink-pale);text-transform:uppercase;margin-bottom:7px}
+.pcard-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.pcard-price{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:500;color:var(--blue);line-height:1;margin-bottom:10px}
+.pcard-price span{font-size:13px;color:var(--ink-light);font-family:'Noto Sans JP',sans-serif;font-weight:400;margin-left:3px}
+.pcard-note{font-size:12px;color:var(--ink-mid);line-height:1.7}
+.pcard-save{display:inline-block;margin-top:8px;background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+.pset-sub{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;padding:10px 0 8px;border-bottom:1px solid var(--pale-mid);margin-bottom:12px}
+.pset-table{width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid var(--pale-mid)}
+.pset-table th{background:var(--pale);font-size:13px;font-weight:500;color:var(--navy);padding:11px 14px;text-align:left;border-bottom:1px solid var(--pale-mid);width:36%}
+.pset-table td{padding:11px 14px;border-bottom:1px solid var(--pale-mid);background:var(--white)}
+.pset-table tr:last-child th,.pset-table tr:last-child td{border-bottom:none}
+.pset-price{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:500;color:var(--blue)}
+.pset-unit{font-size:11.5px;color:var(--ink-light);margin-top:3px}
+.pset-save{display:inline-block;background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;margin-left:8px}
+.price-rules{background:var(--pale);border:1px solid var(--pale-mid);border-radius:10px;padding:14px 18px;margin-top:14px}
+.price-rules p{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.price-rules ul{list-style:none;padding:0}
+.price-rules li{font-size:12.5px;color:var(--ink-mid);padding:3px 0 3px 16px;position:relative;line-height:1.75}
+.price-rules li::before{content:'・';position:absolute;left:0;color:var(--blue)}
+.popt-table{width:100%;border-collapse:collapse;border:1px solid var(--pale-mid);border-radius:0 0 14px 14px;overflow:hidden;background:var(--white)}
+.popt-table tr:nth-child(even) td{background:#fafbff}
+.popt-table td{padding:13px 16px;border-bottom:1px solid var(--pale-mid);font-size:13px;vertical-align:middle}
+.popt-table tr:last-child td{border-bottom:none}
+.popt-name{color:var(--navy);font-weight:500}
+.popt-price{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:500;color:var(--blue);white-space:nowrap;text-align:right}
+.popt-sub{font-size:11.5px;color:var(--ink-light);margin-top:3px}
+@media(max-width:560px){.pcards--2,.pcards--3{grid-template-columns:1fr}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   09 PHILOSOPHY
+━━━━━━━━━━━━━━━━━━━━━ */
+.phil-sec{background:var(--pale)}
+.phil-box{
+  background:var(--white);border-radius:18px;padding:32px;
+  border:1px solid var(--pale-mid);text-align:center;max-width:560px;margin:0 auto 24px
+}
+.phil-box p{font-family:'Noto Serif JP',serif;font-size:15px;color:var(--navy);line-height:2.4}
+.phil-arrow{color:var(--blue-light);font-size:18px;margin:2px 0;display:block}
+.phil-text{font-size:14px;color:var(--ink-mid);line-height:1.95;text-align:center;max-width:500px;margin:0 auto}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   10 FLOW
+━━━━━━━━━━━━━━━━━━━━━ */
+.flow-sec{background:var(--white)}
+.flow-list{display:grid;gap:0}
+.flow-item{display:flex;gap:16px;align-items:flex-start;position:relative}
+.flow-item:not(:last-child)::after{
+  content:'';position:absolute;left:20px;top:44px;
+  width:2px;height:calc(100% - 12px);
+  background:linear-gradient(to bottom,var(--blue),transparent)
+}
+.flow-num{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--blue),#1d4ed8);
+  color:#fff;font-size:15px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;
+  box-shadow:0 3px 12px rgba(37,99,235,.28)
+}
+.flow-content{padding-bottom:30px}
+.flow-content h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;margin-top:8px}
+.flow-content p{font-size:13px;color:var(--ink-mid);line-height:1.8}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   11 FAQ
+━━━━━━━━━━━━━━━━━━━━━ */
+.faq-sec{background:var(--pale)}
+.faq-list{display:grid;gap:10px}
+.faq-item{background:var(--white);border-radius:12px;border:1px solid var(--pale-mid);overflow:hidden}
+.faq-q{
+  padding:17px 18px;font-size:14.5px;font-weight:700;color:var(--navy);
+  display:flex;align-items:flex-start;gap:10px;cursor:pointer;user-select:none
+}
+.faq-q-mark{color:var(--blue);font-size:15px;flex-shrink:0;line-height:1.6}
+.faq-a{padding:0 18px 16px 42px;font-size:13.5px;color:var(--ink-mid);line-height:1.85;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   12 CONTACT CTA
+━━━━━━━━━━━━━━━━━━━━━ */
+.cta-sec{
+  background:linear-gradient(150deg,#04111f,#0f2a4a);
+  text-align:center;padding:90px 22px;position:relative;overflow:hidden
+}
+.cta-sec::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 30% 40%,rgba(37,99,235,.18) 0%,transparent 60%);
+}
+.cta-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.cta-sec h2{
+  font-family:'Noto Serif JP',serif;font-size:clamp(22px,4.5vw,34px);
+  color:#fff;font-weight:500;line-height:1.55;margin-bottom:14px
+}
+.cta-sec h2 em{color:var(--blue-light);font-style:normal}
+.cta-sec p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:36px;line-height:1.9}
+.cta-sub{margin-top:18px;font-size:11.5px;color:rgba(255,255,255,.3);letter-spacing:.04em}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   FOOTER
+━━━━━━━━━━━━━━━━━━━━━ */
+footer{background:#04111f;padding:28px 22px;text-align:center}
+.footer-links{display:flex;gap:18px;justify-content:center;margin-bottom:12px}
+.footer-links a{color:rgba(255,255,255,.38);font-size:12px;text-decoration:none}
+.footer-copy{color:rgba(255,255,255,.22);font-size:11px}
+
+/* ━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━ */
+@media(max-width:560px){
+  .trust-bar-inner{grid-template-columns:repeat(3,1fr);gap:0}
+  .trust-num{font-size:26px}
+  .result-row{grid-template-columns:1fr 22px 1fr;gap:8px}
+  .about-head{flex-direction:column;text-align:center}
+  .about-body{padding:22px}
+  .btn-group{flex-direction:column;align-items:center}
+  .btn{width:100%;justify-content:center}
+}
+
+
+/* ── Result Case Card ── */
+.result-case-card{background:var(--white);border-radius:14px;border:1px solid var(--pale-mid);overflow:hidden;margin-bottom:12px}
+.result-case-card:last-child{margin-bottom:0}
+.rc-header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--pale);border-bottom:1px solid var(--pale-mid)}
+.rc-label{font-size:11px;font-weight:700;color:var(--navy);letter-spacing:.02em}
+.rc-cost{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:500;color:var(--blue)}
+.rc-body{padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.rc-side-label{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-pale);margin-bottom:5px}
+.rc-before{background:#fafbff;border-radius:8px;padding:10px 12px;border:1px solid var(--pale-mid)}
+.rc-before-text{font-size:12px;color:var(--ink-mid);line-height:1.7}
+.rc-arrow{text-align:center;padding:2px 0}
+.rc-after{background:#f0fdf4;border-radius:8px;padding:10px 12px;border:1px solid rgba(22,163,74,.2)}
+.rc-after-item{display:flex;align-items:flex-start;gap:6px;font-size:12px;color:#15803d;line-height:1.6;margin-bottom:4px}
+.rc-after-item:last-child{margin-bottom:0}
+.rc-after-item svg{flex-shrink:0;margin-top:2px}
+.rc-quote{padding:10px 14px;border-top:1px solid var(--pale-mid);background:var(--pale)}
+.rc-quote-text{font-size:12px;color:var(--ink-mid);line-height:1.75;font-style:italic}
+.rc-quote-text strong{color:var(--navy);font-style:normal;font-weight:700}
+
+/* ── SOLVE SECTION ── */
+.solve-sec{background:var(--white)}
+.solve-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:28px}
+.solve-tab{font-family:'Noto Sans JP',sans-serif;display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 12px;border-radius:14px;border:1.5px solid var(--pale-mid);background:var(--pale);color:var(--ink-mid);cursor:pointer;transition:all .18s;text-align:center}
+.solve-tab:hover{border-color:var(--blue);background:var(--white)}
+.solve-tab.active{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 6px 20px rgba(37,99,235,.22)}
+.solve-tab.active .solve-tab-svg circle,.solve-tab.active .solve-tab-svg line,.solve-tab.active .solve-tab-svg polyline,.solve-tab.active .solve-tab-svg rect,.solve-tab.active .solve-tab-svg path,.solve-tab.active .solve-tab-svg polygon{stroke:rgba(255,255,255,.9) !important}
+.solve-tab.active .solve-tab-svg circle[fill="#2563eb"],.solve-tab.active .solve-tab-svg circle[fill="#60a5fa"]{fill:rgba(255,255,255,.9) !important}
+.solve-tab-svg{flex-shrink:0}
+.solve-tab-name{font-size:13px;font-weight:700;line-height:1.3}
+.solve-tab-sub{font-size:11px;line-height:1.4;opacity:.7}
+.solve-tab.active .solve-tab-sub{opacity:.8}
+.solve-panel{display:none}
+.solve-panel.active{display:block}
+.solve-panel-body{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--pale);border-radius:18px;padding:26px;border:1px solid var(--pale-mid)}
+/* ── スマホ最適化 ── */
+@media(max-width:600px){
+  /* タブ：横3列のコンパクトピル型 */
+  .solve-tabs{grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+  .solve-tab{padding:10px 6px;border-radius:10px;gap:5px}
+  .solve-tab-svg{width:20px;height:20px}
+  .solve-tab-name{font-size:11px}
+  .solve-tab-sub{display:none}
+  /* パネル：1カラム */
+  .solve-panel-body{grid-template-columns:1fr;gap:14px;padding:16px;border-radius:14px}
+  /* ブロックをよりコンパクトに */
+  .solve-trouble-block{padding:10px 12px}
+  .solve-trouble-text{font-size:12.5px}
+  .solve-benefit-block{padding:10px 12px}
+  .solve-benefit-item{font-size:12.5px}
+  .solve-price-box{padding:12px 14px}
+  .solve-price-item-val{font-size:15px}
+  /* 事例カード */
+  .result-case-card{border-radius:10px}
+  .rc-body{padding:10px 12px}
+  .rc-before-text{font-size:12px}
+  .rc-after-item{font-size:12px}
+  .rc-quote-text{font-size:11.5px}
+  /* 矢印ブロックを小さく */
+  .solve-arrow-block{margin:0}
+}
+.solve-block-label{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-pale);margin-bottom:8px}
+.solve-trouble-block{background:#fff5f5;border-radius:10px;padding:14px 16px;border:1px solid rgba(239,68,68,.2);margin-bottom:14px}
+.solve-trouble-text{font-size:13px;color:var(--ink-mid);line-height:1.85}
+.solve-trouble-text strong{color:var(--navy)}
+.solve-arrow-block{text-align:center;margin:4px 0 12px}
+.solve-benefit-block{background:var(--white);border-radius:10px;padding:14px 16px;border:1px solid rgba(22,163,74,.2);margin-bottom:14px}
+.solve-benefit-list{display:flex;flex-direction:column;gap:8px}
+.solve-benefit-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--ink-mid);line-height:1.6}
+.solve-benefit-item svg{flex-shrink:0;margin-top:2px}
+.solve-price-box{background:linear-gradient(135deg,#04111f,#0f2a4a);border-radius:12px;padding:16px 18px}
+.solve-price-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px}
+.solve-price-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.solve-price-row:last-of-type{border-bottom:none}
+.solve-price-item-name{font-size:12px;color:rgba(255,255,255,.65)}
+.solve-price-item-val{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:500;color:#fff}
+.solve-price-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:10px;line-height:1.6}
+.solve-right{}
+.solve-voice-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.solve-testi{background:var(--white);border-radius:12px;padding:16px 18px;border:1px solid var(--pale-mid);margin-bottom:10px}
+.solve-testi:last-child{margin-bottom:0}
+.solve-testi-quote{font-size:12.5px;color:var(--ink-mid);line-height:1.85;margin-bottom:10px;padding-left:16px;position:relative}
+.solve-testi-quote::before{content:'"';position:absolute;left:0;top:-4px;font-size:28px;color:var(--pale-mid);font-family:serif;line-height:1}
+.solve-testi-quote strong{color:var(--navy);font-weight:700}
+.solve-testi-meta{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--ink-pale);font-weight:500}
+.solve-testi-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+  01 HERO — 最初の印象・誰のためのLPか
+══════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">
+      <span class="tag tag--light">動画編集 ご依頼ページ</span>
+    </div>
+
+    <!-- camera illustration -->
+    <svg class="hero-deco" width="148" height="100" viewBox="0 0 148 100" fill="none" aria-hidden="true">
+      <rect x="3" y="18" width="16" height="62" rx="3" fill="rgba(147,197,253,.14)" stroke="rgba(147,197,253,.35)" stroke-width="1.2"/>
+      <rect x="6" y="24" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="6" y="38" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="6" y="52" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="6" y="66" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="129" y="18" width="16" height="62" rx="3" fill="rgba(147,197,253,.14)" stroke="rgba(147,197,253,.35)" stroke-width="1.2"/>
+      <rect x="132" y="24" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="132" y="38" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="132" y="52" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="132" y="66" width="10" height="8" rx="1.5" fill="rgba(147,197,253,.28)"/>
+      <rect x="26" y="26" width="96" height="60" rx="9" fill="rgba(255,255,255,.07)" stroke="rgba(147,197,253,.45)" stroke-width="1.5"/>
+      <rect x="42" y="16" width="28" height="14" rx="5" fill="rgba(255,255,255,.06)" stroke="rgba(147,197,253,.3)" stroke-width="1.2"/>
+      <circle cx="74" cy="56" r="21" fill="rgba(37,99,235,.18)" stroke="rgba(147,197,253,.4)" stroke-width="1.5"/>
+      <circle cx="74" cy="56" r="13" fill="rgba(37,99,235,.25)" stroke="rgba(147,197,253,.45)" stroke-width="1"/>
+      <polygon points="70,49 70,63 83,56" fill="#93c5fd"/>
+      <circle cx="108" cy="36" r="5.5" fill="rgba(147,197,253,.25)" stroke="rgba(147,197,253,.5)" stroke-width="1"/>
+      <line x1="100" y1="20" x2="100" y2="13" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="96.5" y1="16.5" x2="103.5" y2="16.5" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="118" y1="16" x2="118" y2="11" stroke="rgba(96,165,250,.5)" stroke-width="1" stroke-linecap="round"/>
+      <line x1="115.5" y1="13.5" x2="120.5" y2="13.5" stroke="rgba(96,165,250,.5)" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+
+    <h1>あなたの「伝えたいこと」を<br><em>届く動画</em>に変えます。</h1>
+    <p class="hero-sub">コーチ・コンサルタント・コンテンツ販売をされている方へ。<br>集客の仕組みを動画に組み込み、成果につながる発信をサポートします。</p>
+    <div class="btn-group" style="justify-content:center">
+      <a href="https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing" target="_blank" class="btn btn--primary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/></svg>
+        編集を依頼する
+      </a>
+      <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" class="btn btn--ghost">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.217.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6.406-11.845a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+        Instagramでも受付
+      </a>
+    </div>
+    <p class="hero-note">※ まずは現状のご相談だけでもOKです</p>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════
+  02 TRUST BAR — 実績の数字で信頼を即確立
+══════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-num">300<sup>+</sup></div>
+      <div class="trust-label">累計担当本数</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">3<sub>年</sub></div>
+      <div class="trust-label">フリーランス歴</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">80<sup>%</sup></div>
+      <div class="trust-label">クライアント継続率</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+  03 SOLVE — 悩み→解決→ベネフィット→声
+══════════════════════════════════ -->
+<section class="sec solve-sec">
+  <div class="wrap">
+    <p class="eyebrow">あなたの悩みを解決します</p>
+    <div class="rule"></div>
+    <h2 class="sec-title">どの悩みが<br>当てはまりますか？</h2>
+
+    <div class="solve-tabs">
+      <button class="solve-tab active" onclick="switchSolve('time',this)">
+        <svg class="solve-tab-svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#2563eb" stroke-width="1.5"/><circle cx="14" cy="14" r="1.4" fill="#2563eb"/><line x1="14" y1="14" x2="14" y2="7" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="14" x2="19" y2="17" stroke="#60a5fa" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <span class="solve-tab-name">時間が足りない</span>
+        <span class="solve-tab-sub">編集に週5〜6時間取られている</span>
+      </button>
+      <button class="solve-tab" onclick="switchSolve('post',this)">
+        <svg class="solve-tab-svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="4" stroke="#2563eb" stroke-width="1.5"/><polyline points="6,10 11,16 16,12 22,19" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="19" r="2" fill="#2563eb"/></svg>
+        <span class="solve-tab-name">発信が続かない</span>
+        <span class="solve-tab-sub">投稿頻度が上げられず集客が止まる</span>
+      </button>
+      <button class="solve-tab" onclick="switchSolve('quality',this)">
+        <svg class="solve-tab-svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#2563eb" stroke-width="1.5"/><path d="M14 8l1.8 3.8 4.2.4-3 2.9.7 4.1L14 17l-3.7 2.2.7-4.1-3-2.9 4.2-.4z" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round" fill="none"/></svg>
+        <span class="solve-tab-name">クオリティに限界</span>
+        <span class="solve-tab-sub">プロっぽくしたい・初めての外注</span>
+      </button>
+    </div>
+
+    <!-- 時間 -->
+    <div class="solve-panel active" id="solve-time">
+      <div class="solve-panel-body">
+        <div class="solve-left">
+          <div class="solve-trouble-block">
+            <p class="solve-block-label" style="color:#ef4444">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#ef4444" stroke-width="1.2"/><line x1="7" y1="4" x2="7" y2="7" stroke="#ef4444" stroke-width="1.2" stroke-linecap="round"/><circle cx="7" cy="9.5" r=".8" fill="#ef4444"/></svg>
+              依頼前の状況
+            </p>
+            <p class="solve-trouble-text">YouTube1本の編集に<strong>5〜6時間</strong>。<br>リールも加えると月に<strong>20時間以上</strong>が編集だけで消えている。<br>撮影はできても公開が追いつかない。</p>
+          </div>
+          <div class="solve-arrow-block">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><line x1="10" y1="2" x2="10" y2="16" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/><polyline points="5,11 10,16 15,11" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="solve-benefit-block">
+            <p class="solve-block-label">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#16a34a" stroke-width="1.2"/><polyline points="4,7 6,9.5 10,5" stroke="#16a34a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              外注したあとの時間の使い方
+            </p>
+            <div class="solve-benefit-list">
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>商品・コンテンツの質を上げる時間へ</span>
+              </div>
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>顧客サポート・フォローの充実</span>
+              </div>
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>家族・プライベートの時間を守る</span>
+              </div>
+            </div>
+          </div>
+          <div class="solve-price-box">
+            <p class="solve-price-label">参考価格</p>
+            <div class="solve-price-row">
+              <span class="solve-price-item-name">YouTube月2本</span>
+              <span class="solve-price-item-val">¥36,000〜 / 月</span>
+            </div>
+            <div class="solve-price-row">
+              <span class="solve-price-item-name">YouTube月4本</span>
+              <span class="solve-price-item-val">¥68,000〜 / 月</span>
+            </div>
+            <p class="solve-price-note">月20時間以上の編集から解放されます</p>
+          </div>
+        </div>
+        <div class="solve-right">
+          <p class="solve-voice-label">実際のお客様の変化</p>
+          <div class="result-case-card">
+              <div class="rc-header">
+                <span class="rc-label">コーチ・YouTube月4本</span>
+                <span class="rc-cost">¥68,000 / 月</span>
+              </div>
+              <div class="rc-body">
+                <div class="rc-before">
+                  <p class="rc-side-label">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#94a3b8" stroke-width="1.1"/><line x1="6" y1="3.5" x2="6" y2="6" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="round"/><circle cx="6" cy="8" r=".7" fill="#94a3b8"/></svg>
+                    依頼前の悩み
+                  </p>
+                  <p class="rc-before-text">毎週5〜6時間の編集作業で疲弊。<br>発信量を増やしたくても体力的に限界だった</p>
+                </div>
+                <div class="rc-arrow">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><line x1="9" y1="2" x2="9" y2="14" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/><polyline points="5,10 9,14 13,10" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="rc-after">
+                  <p class="rc-side-label" style="color:#15803d">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#16a34a" stroke-width="1.1"/><polyline points="3.5,6 5.5,8.5 9,4" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    外注後の変化
+                  </p>
+                  <div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>月4本→8本に増えても余裕が生まれた</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>クライアント対応に時間を充てられた</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>発信量が倍になり問い合わせが増加</span></div>
+                </div>
+              </div>
+              <div class="rc-quote">
+                <p class="rc-quote-text">「編集に使っていた時間を、クライアントとの時間に回せるようになりました。<br><strong>発信量が倍になったのに、むしろ余裕が生まれた感じです。</strong>」</p>
+              </div>
+            </div>
+          <div class="result-case-card">
+              <div class="rc-header">
+                <span class="rc-label">コンサル・YouTube対談動画</span>
+                <span class="rc-cost">¥18,000 / 本</span>
+              </div>
+              <div class="rc-body">
+                <div class="rc-before">
+                  <p class="rc-side-label">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#94a3b8" stroke-width="1.1"/><line x1="6" y1="3.5" x2="6" y2="6" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="round"/><circle cx="6" cy="8" r=".7" fill="#94a3b8"/></svg>
+                    依頼前の悩み
+                  </p>
+                  <p class="rc-before-text">YouTubeに苦手意識があり放置。<br>売上の上がる使い方がわからなかった</p>
+                </div>
+                <div class="rc-arrow">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><line x1="9" y1="2" x2="9" y2="14" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/><polyline points="5,10 9,14 13,10" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="rc-after">
+                  <p class="rc-side-label" style="color:#15803d">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#16a34a" stroke-width="1.1"/><polyline points="3.5,6 5.5,8.5 9,4" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    外注後の変化
+                  </p>
+                  <div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>初月から売上5万円→7桁突破</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>「YouTube見ました」から成約が増えた</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>売り込まずに相談が来る仕組みができた</span></div>
+                </div>
+              </div>
+              <div class="rc-quote">
+                <p class="rc-quote-text">「ひとしさんに編集してもらったおかげで<br><strong>人生で初めての7桁突破！</strong><br>売らずに成約できるようになりました。」</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 発信 -->
+    <div class="solve-panel" id="solve-post">
+      <div class="solve-panel-body">
+        <div class="solve-left">
+          <div class="solve-trouble-block">
+            <p class="solve-block-label" style="color:#ef4444">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#ef4444" stroke-width="1.2"/><line x1="7" y1="4" x2="7" y2="7" stroke="#ef4444" stroke-width="1.2" stroke-linecap="round"/><circle cx="7" cy="9.5" r=".8" fill="#ef4444"/></svg>
+              依頼前の状況
+            </p>
+            <p class="solve-trouble-text">アイデアはあるのに編集が追いつかず投稿できない。<br>リール1本の編集に<strong>2〜3時間</strong>かかり、週1本ですら続けられない。<br>発信を止めるたびに機会損失が積み重なる。</p>
+          </div>
+          <div class="solve-arrow-block">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><line x1="10" y1="2" x2="10" y2="16" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/><polyline points="5,11 10,16 15,11" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="solve-benefit-block">
+            <p class="solve-block-label">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#16a34a" stroke-width="1.2"/><polyline points="4,7 6,9.5 10,5" stroke="#16a34a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              外注したあとの変化
+            </p>
+            <div class="solve-benefit-list">
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>リール週1〜2本ペースを<br>無理なく維持</span>
+              </div>
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>撮影に集中、発信が止まらなくなる</span>
+              </div>
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>フォロワー増加→<br>集客の流れが生まれる</span>
+              </div>
+            </div>
+          </div>
+          <div class="solve-price-box">
+            <p class="solve-price-label">参考価格</p>
+            <div class="solve-price-row">
+              <span class="solve-price-item-name">リール月4本（週1本ペース）</span>
+              <span class="solve-price-item-val">¥30,000〜 / 月</span>
+            </div>
+            <div class="solve-price-row">
+              <span class="solve-price-item-name">リール月8本（週2本ペース）</span>
+              <span class="solve-price-item-val">¥56,000〜 / 月</span>
+            </div>
+            <p class="solve-price-note">毎月の編集時間8〜24時間が丸ごと空きます</p>
+          </div>
+        </div>
+        <div class="solve-right">
+          <p class="solve-voice-label">実際のお客様の変化</p>
+          <div class="result-case-card">
+              <div class="rc-header">
+                <span class="rc-label">SNS運用・リール継続依頼</span>
+                <span class="rc-cost">¥30,000〜 / 月</span>
+              </div>
+              <div class="rc-body">
+                <div class="rc-before">
+                  <p class="rc-side-label">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#94a3b8" stroke-width="1.1"/><line x1="6" y1="3.5" x2="6" y2="6" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="round"/><circle cx="6" cy="8" r=".7" fill="#94a3b8"/></svg>
+                    依頼前の悩み
+                  </p>
+                  <p class="rc-before-text">投稿頻度が上げられず、<br>せっかく撮った素材も眠ったままになっていた</p>
+                </div>
+                <div class="rc-arrow">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><line x1="9" y1="2" x2="9" y2="14" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/><polyline points="5,10 9,14 13,10" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="rc-after">
+                  <p class="rc-side-label" style="color:#15803d">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#16a34a" stroke-width="1.1"/><polyline points="3.5,6 5.5,8.5 9,4" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    外注後の変化
+                  </p>
+                  <div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>週1〜2本ペースを安定して維持できるように</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>フォロワー転換数が目に見えて上昇</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>動画デザインへの視聴者からの反応が増えた</span></div>
+                </div>
+              </div>
+              <div class="rc-quote">
+                <p class="rc-quote-text">「吉岡さんの演出力でだいぶ助かってます。<br><strong>フォロワー転換数が上がって</strong>きておりまして、<br>動画デザインを視聴者が気に入っている様子を感じています。」</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- クオリティ -->
+    <div class="solve-panel" id="solve-quality">
+      <div class="solve-panel-body">
+        <div class="solve-left">
+          <div class="solve-trouble-block">
+            <p class="solve-block-label" style="color:#ef4444">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#ef4444" stroke-width="1.2"/><line x1="7" y1="4" x2="7" y2="7" stroke="#ef4444" stroke-width="1.2" stroke-linecap="round"/><circle cx="7" cy="9.5" r=".8" fill="#ef4444"/></svg>
+              依頼前の状況
+            </p>
+            <p class="solve-trouble-text">独学でやってきたが「もっとプロっぽく」したい。<br>外注を考えてもどこに頼めばいいかわからず、<br><strong>世界観を理解してもらえるか不安</strong>で踏み出せない。</p>
+          </div>
+          <div class="solve-arrow-block">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><line x1="10" y1="2" x2="10" y2="16" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/><polyline points="5,11 10,16 15,11" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="solve-benefit-block">
+            <p class="solve-block-label">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#16a34a" stroke-width="1.2"/><polyline points="4,7 6,9.5 10,5" stroke="#16a34a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              外注したあとの変化
+            </p>
+            <div class="solve-benefit-list">
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>ヒアリングで世界観・トンマナを<br>丁寧に再現</span>
+              </div>
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>まず1本から試せるので安心してスタート</span>
+              </div>
+              <div class="solve-benefit-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="#2563eb" stroke-width="1.2"/><path d="M5 8.5l2 2 4-4" stroke="#2563eb" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>提案型編集で<br>「思ってたより良い」が続く</span>
+              </div>
+            </div>
+          </div>
+          <div class="solve-price-box">
+            <p class="solve-price-label">参考価格（まず1本から）</p>
+            <div class="solve-price-row">
+              <span class="solve-price-item-name">リール1本（〜60秒）</span>
+              <span class="solve-price-item-val">¥8,000〜</span>
+            </div>
+            <div class="solve-price-row">
+              <span class="solve-price-item-name">YouTube1本（〜20分）</span>
+              <span class="solve-price-item-val">¥18,000〜</span>
+            </div>
+            <p class="solve-price-note">納得してから継続。押し売りは一切しません</p>
+          </div>
+        </div>
+        <div class="solve-right">
+          <p class="solve-voice-label">実際のお客様の変化</p>
+          <div class="result-case-card">
+              <div class="rc-header">
+                <span class="rc-label">縦動画・初めての外注</span>
+                <span class="rc-cost">¥8,000 / 本</span>
+              </div>
+              <div class="rc-body">
+                <div class="rc-before">
+                  <p class="rc-side-label">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#94a3b8" stroke-width="1.1"/><line x1="6" y1="3.5" x2="6" y2="6" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="round"/><circle cx="6" cy="8" r=".7" fill="#94a3b8"/></svg>
+                    依頼前の悩み
+                  </p>
+                  <p class="rc-before-text">どこに頼めば良いかわからず、<br>世界観を理解してもらえるか不安で踏み出せなかった</p>
+                </div>
+                <div class="rc-arrow">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><line x1="9" y1="2" x2="9" y2="14" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/><polyline points="5,10 9,14 13,10" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="rc-after">
+                  <p class="rc-side-label" style="color:#15803d">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#16a34a" stroke-width="1.1"/><polyline points="3.5,6 5.5,8.5 9,4" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    外注後の変化
+                  </p>
+                  <div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ヒアリングで世界観をそのまま再現</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>「フワッとした要望」が形になって感動</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>初回から納得、そのまま継続に</span></div>
+                </div>
+              </div>
+              <div class="rc-quote">
+                <p class="rc-quote-text">「フワッと伝えてしまっていたのですが、<br>それをここまで形にしてくださりありがとうございます。<br><strong>想像以上にハイクオリティで凄すぎます！</strong><br>初めての外注先がひとしさんで良かったです。」</p>
+              </div>
+            </div>
+          <div class="result-case-card">
+              <div class="rc-header">
+                <span class="rc-label">リール・継続依頼</span>
+                <span class="rc-cost">継続中</span>
+              </div>
+              <div class="rc-body">
+                <div class="rc-before">
+                  <p class="rc-side-label">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#94a3b8" stroke-width="1.1"/><line x1="6" y1="3.5" x2="6" y2="6" stroke="#94a3b8" stroke-width="1.1" stroke-linecap="round"/><circle cx="6" cy="8" r=".7" fill="#94a3b8"/></svg>
+                    依頼前の悩み
+                  </p>
+                  <p class="rc-before-text">一度頼んだが信頼できるか確信が持てず、<br>継続するか迷っていた</p>
+                </div>
+                <div class="rc-arrow">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><line x1="9" y1="2" x2="9" y2="14" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/><polyline points="5,10 9,14 13,10" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="rc-after">
+                  <p class="rc-side-label" style="color:#15803d">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#16a34a" stroke-width="1.1"/><polyline points="3.5,6 5.5,8.5 9,4" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    外注後の変化
+                  </p>
+                  <div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>クオリティへの安心感が積み重なった</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>やり取りのスムーズさが決め手に</span></div><div class="rc-after-item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" fill="rgba(22,163,74,.15)" stroke="#16a34a" stroke-width="1"/><polyline points="4,7 6,9 10,4.5" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>リピート依頼を迷わず決断</span></div>
+                </div>
+              </div>
+              <div class="rc-quote">
+                <p class="rc-quote-text">「また編集をお願いする機会があれば、<strong>ひとしさん一択</strong>です。今後ともよろしくお願い致します。」</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  04 RESULTS — ビフォーアフターで「解決できる」と示す
+══════════════════════════════════ -->
+<section class="sec results-sec">
+  <div class="wrap">
+    <p class="eyebrow">ビフォーアフター事例</p>
+    <div class="rule" style="background:linear-gradient(90deg,var(--blue-light),transparent)"></div>
+    <h2 class="sec-title">依頼後に変わったこと</h2>
+    <p class="sec-lead">実際にご依頼いただいたクライアント様の変化です。</p>
+    <div class="result-cards">
+
+      <!-- CASE A -->
+      <div class="result-card">
+        <div class="result-head">
+          <div class="result-avatar">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="8" r="4.5" fill="rgba(147,197,253,.6)"/><path d="M3 20 Q3 14 11 14 Q19 14 19 20" fill="rgba(147,197,253,.4)"/></svg>
+          </div>
+          <div>
+            <div class="result-head-name">Aさん（コーチング）</div>
+            <div class="result-head-type">YouTube・月4本投稿</div>
+          </div>
+        </div>
+        <div class="result-body">
+          <div class="result-row">
+            <div class="result-box">
+              <div class="result-box-label">BEFORE</div>
+              <div class="result-val">月4本<small>編集に週12h</small></div>
+            </div>
+            <div class="result-arrow">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><line x1="3" y1="11" x2="17" y2="11" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,6 17,11 12,16" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="result-box after">
+              <div class="result-box-label">AFTER</div>
+              <div class="result-val">月8本<small style="color:rgba(134,239,172,.7)">編集ゼロに</small></div>
+            </div>
+          </div>
+          <p class="result-comment">「編集に使っていた時間を、クライアントさんとの時間に回せるようになりました。<br>発信量が倍になったのに、むしろ余裕が生まれた感じです。」</p>
+        </div>
+      </div>
+
+      <!-- CASE B -->
+      <div class="result-card">
+        <div class="result-head">
+          <div class="result-avatar">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="8" r="4.5" fill="rgba(147,197,253,.6)"/><path d="M3 20 Q3 14 11 14 Q19 14 19 20" fill="rgba(147,197,253,.4)"/></svg>
+          </div>
+          <div>
+            <div class="result-head-name">Bさん（コンサルタント）</div>
+            <div class="result-head-type">Reels・YouTube 運用</div>
+          </div>
+        </div>
+        <div class="result-body">
+          <div class="result-row">
+            <div class="result-box">
+              <div class="result-box-label">BEFORE</div>
+              <div class="result-val">クオリティ<small>に不満あり</small></div>
+            </div>
+            <div class="result-arrow">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><line x1="3" y1="11" x2="17" y2="11" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,6 17,11 12,16" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="result-box after">
+              <div class="result-box-label">AFTER</div>
+              <div class="result-val">フォロワー<small style="color:rgba(134,239,172,.7)">+2,000人</small></div>
+            </div>
+          </div>
+          <p class="result-comment">「テロップの見せ方や間の取り方を変えたら、<br>コメント数が明らかに増えました。<br>編集って、こんなに視聴者の反応を変えるんだと実感しました。」</p>
+        </div>
+      </div>
+
+      <!-- CASE C -->
+      <div class="result-card">
+        <div class="result-head">
+          <div class="result-avatar">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="5" y="7" width="12" height="10" rx="2" fill="rgba(147,197,253,.5)" stroke="rgba(147,197,253,.6)" stroke-width="1"/>
+              <path d="M8 7 Q8 4 11 4 Q14 4 14 7" stroke="rgba(147,197,253,.7)" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <line x1="8.5" y1="11" x2="13.5" y2="11" stroke="rgba(255,255,255,.5)" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="result-head-name">Cさん（コンテンツ販売）</div>
+            <div class="result-head-type">YouTubeで集客スタート → 6ヶ月</div>
+          </div>
+        </div>
+        <div class="result-body">
+          <!-- bar chart -->
+          <div class="result-chart">
+            <div class="result-bar" style="height:30%;background:rgba(147,197,253,.3)"></div>
+            <div class="result-bar" style="height:42%;background:rgba(147,197,253,.4)"></div>
+            <div class="result-bar" style="height:55%;background:rgba(96,165,250,.5)"></div>
+            <div class="result-bar" style="height:68%;background:rgba(96,165,250,.65)"></div>
+            <div class="result-bar" style="height:82%;background:rgba(37,99,235,.7)"></div>
+            <div class="result-bar" style="height:100%;background:rgba(22,163,74,.75);position:relative">
+              <span style="position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;color:#86efac;white-space:nowrap">255万</span>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-box">
+              <div class="result-box-label">最高売上 BEFORE</div>
+              <div class="result-val" style="font-size:20px">70万円</div>
+            </div>
+            <div class="result-arrow">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><line x1="3" y1="11" x2="17" y2="11" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,6 17,11 12,16" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="result-box after">
+              <div class="result-box-label">6ヶ月後 AFTER</div>
+              <div class="result-val" style="font-size:20px">255万円</div>
+            </div>
+          </div>
+          <p class="result-comment">「YouTubeをやるなら動画の質が大事と感じてお願いしました。<br>視聴者に伝わる編集にしてもらってから再生数が伸び始め、<br>6ヶ月で売上が3倍以上になりました。コンテンツ販売との相性が抜群です。」</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  06 FEATURES — なぜ私に頼むべきか
+══════════════════════════════════ -->
+<section class="sec features-sec">
+  <div class="wrap">
+    <p class="eyebrow">選ばれる理由</p>
+    <div class="rule"></div>
+    <h2 class="sec-title">「伝わる動画」にするために<br>こだわっていること</h2>
+    <p class="sec-lead">技術だけでなく、あなたのビジネスの文脈を理解して編集します。</p>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <p class="feature-pt">POINT 01</p>
+        <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="19" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+          <circle cx="16" cy="19" r="4" fill="#2563eb" opacity=".7"/>
+          <circle cx="28" cy="15" r="3.5" fill="#1d4ed8" opacity=".6"/>
+          <circle cx="34" cy="24" r="3" fill="#2563eb" opacity=".8"/>
+          <circle cx="30" cy="33" r="3.5" fill="#1d4ed8" opacity=".55"/>
+          <circle cx="18" cy="32" r="3" fill="#2563eb" opacity=".65"/>
+          <circle cx="24" cy="24" r="5" fill="white" stroke="#2563eb" stroke-width="1.2"/>
+          <line x1="29" y1="29" x2="36" y2="36" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="37" cy="37" r="3" fill="#1d4ed8"/>
+        </svg>
+        <h3>世界観・トンマナを守る</h3>
+        <p>ヒアリングで発信コンセプトを徹底理解。<br>「思ってたのと違う」が起きません</p>
+      </div>
+
+      <div class="feature-card">
+        <p class="feature-pt">POINT 02</p>
+        <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="19" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+          <polygon points="28,11 18,25 24,25 20,37 33,21 25,21" fill="#1d4ed8" stroke="#bfdbfe" stroke-width=".5" stroke-linejoin="round"/>
+        </svg>
+        <h3>納期をきっちり守る</h3>
+        <p>スケジュール管理を徹底。<br>急ぎ対応の相談もお気軽にどうぞ</p>
+      </div>
+
+      <div class="feature-card">
+        <p class="feature-pt">POINT 03</p>
+        <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="19" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+          <path d="M24 13 C19 13 15 17 15 22.5 C15 26.5 17.5 29.5 21 31.5 L21 34.5 L27 34.5 L27 31.5 C30.5 29.5 33 26.5 33 22.5 C33 17 29 13 24 13Z" fill="#2563eb" stroke="#1d4ed8" stroke-width=".8"/>
+          <line x1="21" y1="36" x2="27" y2="36" stroke="#1d4ed8" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="22.5" y1="38" x2="25.5" y2="38" stroke="#1d4ed8" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        <h3>提案型の編集</h3>
+        <p>「ここをこう変えたら伝わる」という視点での<br>提案もセットでお届け</p>
+      </div>
+
+      <div class="feature-card">
+        <p class="feature-pt">POINT 04</p>
+        <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="19" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+          <path d="M14 24 A10 10 0 0 1 34 18" stroke="#1d4ed8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <polygon points="34,12 34,20 27,16" fill="#1d4ed8"/>
+          <path d="M34 24 A10 10 0 0 1 14 30" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <polygon points="14,36 14,28 21,32" fill="#2563eb"/>
+        </svg>
+        <h3>丁寧な修正対応</h3>
+        <p>「ここが違う」をしっかり受け止め、<br>納得いくまで調整します</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  07 ABOUT — 誰が作るのかを知ってもらう
+══════════════════════════════════ -->
+<section class="sec about-sec">
+  <div class="wrap">
+    <p class="eyebrow">担当者紹介</p>
+    <div class="rule"></div>
+    <h2 class="sec-title">はじめまして。<br>吉岡ひとしです。</h2>
+    <div class="about-card">
+      <div class="about-head">
+        <div class="about-photo">
+          <img src="data:image/png;base64,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" alt="吉岡ひとし">
+        </div>
+        <div>
+          <div class="about-name">吉岡 ひとし</div>
+          <div class="about-handle">フリーランス動画編集者　@hitoshi_editor</div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>動画編集との出会いは、友人から頼まれた<strong>結婚式の余興ムービー</strong>でした。<br>初めてのことばかりで手探りでしたが、当日スクリーンに映像が流れ、会場が笑いと涙に包まれた瞬間——「自分のスキルが、誰かの人生の大切な場面に貢献できた」と心から嬉しかった。その体験が、すべての原点です。</p>
+        <p>その後、フリーターや日雇い労働を経験する中で、動画編集を本格的に学び直しました。<br>やがてコーチ・コンサル・コンテンツ販売の方々と仕事をするうちに気づいたのは、<strong>「動画編集が苦手で、発信を止めてしまっている人がとても多い」</strong>ということ。<br>撮った動画が山積みになり、伝えたい想いがそのまま眠っている——そんなもどかしさに、力になりたいと感じました。</p>
+        <p>今は「編集に苦しむ人をゼロにしたい」という理念のもと、<br>技術だけでなく<strong>集客の仕組みを動画に組み込む提案型の編集</strong>を心がけています。<br>家族との時間を大切にしながら、毎日クライアントの発信に向き合っています。</p>
+        <div class="about-stats">
+          <div><div class="about-stat-num">300<span style="font-size:16px">+</span></div><div class="about-stat-label">累計動画本数</div></div>
+          <div><div class="about-stat-num">3</div><div class="about-stat-label">年のフリーランス歴</div></div>
+          <div><div class="about-stat-num">80<span style="font-size:16px">%</span></div><div class="about-stat-label">継続率</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  08 PRICING — 料金を明示して安心させる
+══════════════════════════════════ -->
+<section class="sec pricing-sec">
+  <div class="wrap">
+    <p class="eyebrow">料金プラン</p>
+    <div class="rule"></div>
+    <h2 class="sec-title">提供サービスと料金</h2>
+    <p class="sec-lead">動画の目的・長さ・本数によってプランをお選びいただけます。<br>迷ったらまずご相談ください。</p>
+
+    <!-- 目的別ナビゲーション -->
+    <!-- ① 縦動画 -->
+    <div class="pcat">
+      <div class="pcat-head pcat-head--tate">
+        <div class="pcat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="1" width="14" height="22" rx="3" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.7)" stroke-width="1.3"/><rect x="8" y="4" width="8" height="13" rx="1" fill="rgba(255,255,255,.15)"/><circle cx="12" cy="20" r="1.3" fill="rgba(255,255,255,.6)"/><polygon points="10.5,9 10.5,13 15,11" fill="rgba(255,255,255,.8)"/></svg>
+        </div>
+        <div class="pcat-head-text">
+          <h3>縦動画（リール）</h3>
+          <p>Reels / Shorts / TikTok　¥5,000〜（〜30秒）／ ¥10,000〜（〜60秒）</p>
+        </div>
+      </div>
+
+      <!-- タブ：単発 / セット -->
+      <div class="ptab-wrap" id="tate-tabs">
+        <div class="ptab active" onclick="switchTab('tate','tandoku',this)">単発</div>
+        <div class="ptab" onclick="switchTab('tate','set',this)">セット価格</div>
+      </div>
+
+      <!-- 単発パネル -->
+      <div class="ptab-panel active" id="tate-tandoku">
+        <div class="pcards pcards--2">
+          <div class="pcard">
+            <div class="pcard-label">TALK REEL · シンプル量産型</div>
+            <div class="pcard-name">トークリール</div>
+            <div class="reel-price-grid" style="margin:10px 0 8px">
+              <div class="reel-price-row">
+                <span class="reel-dur">〜30秒</span>
+                <span class="reel-price-val">¥5,000</span>
+              </div>
+              <div class="reel-price-row featured-row">
+                <span class="reel-dur"><strong>〜60秒</strong></span>
+                <span class="reel-price-val"><strong>¥8,000</strong></span>
+              </div>
+              <div class="reel-price-row">
+                <span class="reel-dur">〜90秒</span>
+                <span class="reel-price-val">¥10,000</span>
+              </div>
+            </div>
+            <div class="pcard-note"><span style="font-size:11px;color:var(--ink-pale)">カット・フルテロップ・BGM・効果音少なめ　サムネ別途</span></div>
+          </div>
+          <div class="pcard featured">
+            <div class="pcard-badge">クオリティ重視</div>
+            <div class="pcard-label">QUALITY REEL · 演出込み</div>
+            <div class="pcard-name">クオリティ重視リール</div>
+            <div class="reel-price-grid" style="margin:10px 0 8px">
+              <div class="reel-price-row">
+                <span class="reel-dur">ベーシック〜60秒</span>
+                <span class="reel-price-val">¥10,000</span>
+              </div>
+              <div class="reel-price-row featured-row">
+                <span class="reel-dur"><strong>リッチ〜60秒</strong></span>
+                <span class="reel-price-val"><strong>¥15,000</strong></span>
+              </div>
+              <div class="reel-price-row">
+                <span class="reel-dur">プロモ〜90秒</span>
+                <span class="reel-price-val">¥20,000</span>
+              </div>
+            </div>
+            <div class="pcard-note">テロップアニメ・カラグレ・BGM強化・エフェクト・構成提案など演出を込めたプラン<br><span style="font-size:11px;color:var(--ink-pale)">60秒超は90秒プランを適用</span></div>
+          </div>
+        </div>
+        <div class="price-rules">
+          <p>リール 料金ルール</p>
+          <ul>
+            <li>料金は動画の尺ごとの固定価格です（分単位ではありません）</li>
+            <li>60秒超の場合は90秒プランを適用します</li>
+            <li>サムネイル（カバー画像）は別途オプションにて対応</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- セットパネル -->
+      <div class="ptab-panel" id="tate-set">
+        <div class="pset-sub">トークリール セット（〜60秒 ¥8,000 / 本 基準）</div>
+        <table class="pset-table">
+          <tbody>
+            <tr>
+              <th>4本セット</th>
+              <td><div class="pset-price">30,000円</div><div class="pset-unit">1本あたり ¥7,500 <span class="pset-save">¥500引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>8本セット</th>
+              <td><div class="pset-price">56,000円</div><div class="pset-unit">1本あたり ¥7,000 <span class="pset-save">¥1,000引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>12本セット</th>
+              <td><div class="pset-price">78,000円</div><div class="pset-unit">1本あたり ¥6,500 <span class="pset-save">¥1,500引き / 本</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="height:16px"></div>
+        <div class="pset-sub">クオリティ重視リール セット（リッチ〜60秒 ¥15,000 / 本 基準）</div>
+        <table class="pset-table">
+          <tbody>
+            <tr>
+              <th>4本セット</th>
+              <td><div class="pset-price">56,000円</div><div class="pset-unit">1本あたり ¥14,000 <span class="pset-save">¥1,000引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>8本セット</th>
+              <td><div class="pset-price">108,000円</div><div class="pset-unit">1本あたり ¥13,500 <span class="pset-save">¥1,500引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>12本セット</th>
+              <td><div class="pset-price">156,000円</div><div class="pset-unit">1本あたり ¥13,000 <span class="pset-save">¥2,000引き / 本</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ② 横動画 -->
+    <div class="pcat">
+      <div class="pcat-head pcat-head--yoko">
+        <div class="pcat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="1" y="5" width="22" height="14" rx="3" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.7)" stroke-width="1.3"/><rect x="3" y="7" width="18" height="10" rx="1" fill="rgba(255,255,255,.15)"/><polygon points="10,10 10,15 16,12.5" fill="rgba(255,255,255,.8)"/></svg>
+        </div>
+        <div class="pcat-head-text">
+          <h3>横動画（YouTube）</h3>
+          <p>YouTube / 講座 / インタビュー　基本 ¥900 / 分・超過 ¥1,000 / 分</p>
+        </div>
+      </div>
+
+      <!-- タブ：単発 / セット -->
+      <div class="ptab-wrap" id="yoko-tabs">
+        <div class="ptab active" onclick="switchTab('yoko','tandoku',this)">単発</div>
+        <div class="ptab" onclick="switchTab('yoko','set',this)">セット価格</div>
+      </div>
+
+      <!-- 単発パネル -->
+      <div class="ptab-panel active" id="yoko-tandoku">
+        <div class="pcards pcards--3">
+          <div class="pcard">
+            <div class="pcard-label">〜10分</div>
+            <div class="pcard-name">10分以内</div>
+            <div class="pcard-price">9,000<span>円</span></div>
+            <div class="pcard-note">¥900 × 10分　解説動画・Vlog・サービス紹介など<br><span style="font-size:11px;color:var(--ink-pale)">フルテロップ・BGM1種・効果音・画像数枚　サムネ別</span></div>
+          </div>
+          <div class="pcard featured">
+            <div class="pcard-badge">人気</div>
+            <div class="pcard-label">〜20分　基準ライン</div>
+            <div class="pcard-name">20分以内</div>
+            <div class="pcard-price">18,000<span>円</span></div>
+            <div class="pcard-note">¥900 × 20分　講座・インタビュー・対談など<br><span style="font-size:11px;color:var(--ink-pale)">フルテロップ・BGM1種・効果音・画像数枚　サムネ別</span></div>
+          </div>
+          <div class="pcard">
+            <div class="pcard-label">〜30分</div>
+            <div class="pcard-name">30分以内</div>
+            <div class="pcard-price">27,000<span>円</span></div>
+            <div class="pcard-note">¥900 × 30分　ウェビナー・長尺講座など<br><span style="font-size:11px;color:var(--ink-pale)">フルテロップ・BGM1種・効果音・画像数枚　サムネ別</span></div>
+          </div>
+        </div>
+        <div class="price-rules">
+          <p>YouTube 料金ルール</p>
+          <ul>
+            <li>基本単価 ¥900 / 分。想定尺を事前にお知らせください</li>
+            <li>超過分（想定尺オーバー）は ¥1,000 / 分で計算します</li>
+            <li>例：20分想定 → 実尺23分の場合：¥18,000 + ¥3,000（超過3分）= ¥21,000</li>
+            <li>60分超・セミナー等の長尺はお気軽にご相談ください</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- セットパネル -->
+      <div class="ptab-panel" id="yoko-set">
+        <div class="pset-sub">YouTube セット価格（〜20分 ¥18,000 / 本 基準）</div>
+        <table class="pset-table">
+          <tbody>
+            <tr>
+              <th>3本セット</th>
+              <td><div class="pset-price">51,000円</div><div class="pset-unit">1本あたり ¥17,000 <span class="pset-save">¥1,000引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>5本セット</th>
+              <td><div class="pset-price">82,500円</div><div class="pset-unit">1本あたり ¥16,500 <span class="pset-save">¥1,500引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>10本セット</th>
+              <td><div class="pset-price">160,000円</div><div class="pset-unit">1本あたり ¥16,000 <span class="pset-save">¥2,000引き / 本</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="height:16px"></div>
+        <div class="pset-sub">YouTube セット価格（〜30分 ¥27,000 / 本 基準）</div>
+        <table class="pset-table">
+          <tbody>
+            <tr>
+              <th>3本セット</th>
+              <td><div class="pset-price">78,000円</div><div class="pset-unit">1本あたり ¥26,000 <span class="pset-save">¥1,000引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>5本セット</th>
+              <td><div class="pset-price">127,500円</div><div class="pset-unit">1本あたり ¥25,500 <span class="pset-save">¥1,500引き / 本</span></div></td>
+            </tr>
+            <tr>
+              <th>10本セット</th>
+              <td><div class="pset-price">250,000円</div><div class="pset-unit">1本あたり ¥25,000 <span class="pset-save">¥2,000引き / 本</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ③ オプション -->
+    <div class="pcat">
+      <div class="pcat-head pcat-head--opt">
+        <div class="pcat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="rgba(255,255,255,.7)" stroke-width="1.3" fill="rgba(255,255,255,.15)"/><line x1="12" y1="7" x2="12" y2="12" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="15" r="1.3" fill="rgba(255,255,255,.8)"/></svg>
+        </div>
+        <div class="pcat-head-text">
+          <h3>オプション</h3>
+          <p>単品・月額プランに追加できます</p>
+        </div>
+      </div>
+      <table class="popt-table">
+        <tbody>
+          <tr><td class="popt-name">サムネイル制作（静止画）</td><td class="popt-price">3,000円 / 枚</td></tr>
+          <tr><td class="popt-name">サムネイル制作（デザイン込み）</td><td class="popt-price">5,000円 / 枚</td></tr>
+          <tr><td class="popt-name">企画・構成サポート（30分）</td><td class="popt-price">5,000円</td></tr>
+          <tr><td class="popt-name">台本添削</td><td class="popt-price">2,000円 / 本</td></tr>
+          <tr><td class="popt-name">運用コンサル（月次）<div class="popt-sub">投稿設計・改善点・台本サポート含む</div></td><td class="popt-price">15,000円 / 月</td></tr>
+          <tr><td class="popt-name">特急納品（3日以内）</td><td class="popt-price">通常料金の 30%</td></tr>
+          <tr><td class="popt-name">修正2回目以降</td><td class="popt-price">3,000円 / 回</td></tr>
+          <tr><td class="popt-name">素材提出遅延</td><td class="popt-price">5,000円</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ④ 料金シミュレーター -->
+    <div class="pcat" id="simulator-section">
+      <div class="pcat-head" style="background:linear-gradient(135deg,#0a2540,#1a3a6b)">
+        <div class="pcat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.7)" stroke-width="1.3"/><rect x="6" y="7" width="5" height="3" rx="1" fill="rgba(255,255,255,.5)"/><rect x="13" y="7" width="5" height="3" rx="1" fill="rgba(255,255,255,.5)"/><rect x="6" y="12" width="5" height="3" rx="1" fill="rgba(255,255,255,.3)"/><rect x="13" y="12" width="5" height="3" rx="1" fill="rgba(255,255,255,.3)"/><rect x="6" y="17" width="5" height="2" rx="1" fill="rgba(255,255,255,.2)"/><rect x="13" y="17" width="5" height="2" rx="1" fill="rgba(255,255,255,.2)"/></svg>
+        </div>
+        <div class="pcat-head-text">
+          <h3>料金シミュレーター</h3>
+          <p>動画の内容・本数を選ぶだけで概算金額を確認できます</p>
+        </div>
+      </div>
+
+      <div class="simulator-shell">
+
+        <div class="sim-mobile-summary" id="sim-mobile-summary" aria-live="polite">
+          <div class="sim-mobile-summary-meta">
+            <span class="sim-mobile-summary-label">概算合計</span>
+            <span class="sim-mobile-summary-price" id="sim-mobile-total">¥9,000</span>
+          </div>
+          <a href="https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing" target="_blank" rel="noopener" class="btn btn--primary sim-mobile-summary-btn" onclick="return handleSimBooking(event)">
+            相談予約へ進む
+          </a>
+        </div>
+
+        <div class="sim-accordion" id="sim-accordion">
+          <div class="sim-accordion-item open" id="sim-item-1">
+            <button type="button" class="sim-accordion-trigger" onclick="toggleSimAccordion(1)">
+              <span class="sim-accordion-step">STEP 1</span>
+              <span class="sim-accordion-title">動画の種類</span>
+              <span class="sim-accordion-summary" id="sim-summary-type">YouTube（横動画）</span>
+              <span class="sim-accordion-icon">＋</span>
+            </button>
+            <div class="sim-accordion-body">
+              <div class="sim-btn-group sim-btn-group--full" id="sim-type-group">
+                <button type="button" class="sim-btn sim-type-btn active" onclick="simSelect('type','youtube',this)">
+                  <span class="sim-type-name">YouTube（横動画）</span>
+                  <span class="sim-type-desc">カット・フルテロップ・BGM・効果音・画像挿入</span>
+                </button>
+                <button type="button" class="sim-btn sim-type-btn" onclick="simSelect('type','reel_talk',this)">
+                  <span class="sim-type-name">リール・トーク</span>
+                  <span class="sim-type-desc">カット・テロップ・BGM・効果音少なめ</span>
+                </button>
+                <button type="button" class="sim-btn sim-type-btn" onclick="simSelect('type','reel_quality',this)">
+                  <span class="sim-type-name">リール・クオリティ重視</span>
+                  <span class="sim-type-desc">テロップアニメ・カラグレ・エフェクト・BGM演出</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-accordion-item open" id="sim-item-2">
+            <button type="button" class="sim-accordion-trigger" onclick="toggleSimAccordion(2)">
+              <span class="sim-accordion-step">STEP 2</span>
+              <span class="sim-accordion-title">長さ / プラン</span>
+              <span class="sim-accordion-summary" id="sim-summary-length">YouTube〜10分</span>
+              <span class="sim-accordion-icon">＋</span>
+            </button>
+            <div class="sim-accordion-body">
+              <div class="sim-step-switcher">
+                <div class="sim-step" id="sim-step2-youtube">
+                  <div class="sim-btn-group sim-btn-group--full" id="sim-duration-group">
+                    <button type="button" class="sim-btn active" onclick="simSelect('duration','yt10',this)">〜10分（¥9,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('duration','yt15',this)">〜15分（¥13,500 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('duration','yt20',this)">〜20分（¥18,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('duration','yt30',this)">〜30分（¥27,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('duration','yt45',this)">〜45分（¥40,500 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('duration','yt60',this)">〜60分（¥54,000 / 本）</button>
+                  </div>
+                </div>
+
+                <div class="sim-step" id="sim-step2-reel-talk" style="display:none">
+                  <div class="sim-btn-group sim-btn-group--full" id="sim-reel-talk-group">
+                    <button type="button" class="sim-btn active" onclick="simSelect('reel_talk','rt30',this)">〜30秒（¥5,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('reel_talk','rt60',this)">〜60秒（¥8,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('reel_talk','rt90',this)">〜90秒（¥10,000 / 本）</button>
+                  </div>
+                </div>
+
+                <div class="sim-step" id="sim-step2-reel-quality" style="display:none">
+                  <div class="sim-btn-group sim-btn-group--full" id="sim-reel-quality-group">
+                    <button type="button" class="sim-btn active" onclick="simSelect('reel_quality','rq_basic',this)">ベーシック（¥10,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('reel_quality','rq_rich',this)">リッチ（¥15,000 / 本）</button>
+                    <button type="button" class="sim-btn" onclick="simSelect('reel_quality','rq_promo',this)">プロモ（¥20,000 / 本）</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-accordion-item open" id="sim-item-3">
+            <button type="button" class="sim-accordion-trigger" onclick="toggleSimAccordion(3)">
+              <span class="sim-accordion-step">STEP 3</span>
+              <span class="sim-accordion-title">依頼本数</span>
+              <span class="sim-accordion-summary" id="sim-summary-qty">1本</span>
+              <span class="sim-accordion-icon">＋</span>
+            </button>
+            <div class="sim-accordion-body">
+              <div class="sim-qty-row">
+                <button type="button" class="sim-qty-btn" onclick="simChangeQty(-1)">−</button>
+                <span class="sim-qty-display"><span id="sim-qty-num">1</span><span class="sim-qty-unit">本</span></span>
+                <button type="button" class="sim-qty-btn" onclick="simChangeQty(1)">＋</button>
+                <span class="sim-discount-badge" id="sim-discount-badge" style="display:none"></span>
+              </div>
+              <p class="sim-qty-note" id="sim-qty-note"></p>
+            </div>
+          </div>
+
+          <div class="sim-accordion-item open" id="sim-item-4">
+            <button type="button" class="sim-accordion-trigger" onclick="toggleSimAccordion(4)">
+              <span class="sim-accordion-step">STEP 4</span>
+              <span class="sim-accordion-title">オプション</span>
+              <span class="sim-accordion-summary" id="sim-summary-options">なし</span>
+              <span class="sim-accordion-icon">＋</span>
+            </button>
+            <div class="sim-accordion-body">
+              <div class="sim-check-group">
+                <label class="sim-check"><input type="checkbox" id="opt_thumb_simple" onchange="calcSim()"><span>サムネイル制作（静止画）<em>+¥3,000 / 本</em></span></label>
+                <label class="sim-check"><input type="checkbox" id="opt_thumb_design" onchange="calcSim()"><span>サムネイル制作（デザイン込み）<em>+¥5,000 / 本</em></span></label>
+                <label class="sim-check"><input type="checkbox" id="opt_planning" onchange="calcSim()"><span>企画・構成サポート<em>+¥5,000</em></span></label>
+                <label class="sim-check"><input type="checkbox" id="opt_script" onchange="calcSim()"><span>台本添削<em>+¥2,000 / 本</em></span></label>
+                <label class="sim-check"><input type="checkbox" id="opt_consult" onchange="calcSim()"><span>運用コンサル（月次）<em>+¥15,000</em></span></label>
+                <label class="sim-check"><input type="checkbox" id="opt_express" onchange="calcSim()"><span>特急納品（3日以内）<em>+30%</em></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-result" id="sim-result">
+          <div class="sim-result-inner">
+            <div class="sim-result-breakdown" id="sim-breakdown"></div>
+            <div class="sim-result-total">
+              <span class="sim-result-label">概算合計</span>
+              <span class="sim-result-price" id="sim-total">¥9,000</span>
+            </div>
+            <p class="sim-result-note">※ 素材の尺・内容によって変動する場合があります。正確なお見積もりはご相談時にご案内します。</p>
+          </div>
+        </div>
+
+        <div class="sim-action-wrap">
+          <a href="https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing" target="_blank" rel="noopener" class="btn btn--primary sim-consult-btn" id="sim-consult-btn" onclick="return handleSimBooking(event)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/></svg>
+            この内容で相談予約へ進む
+          </a>
+          <p class="sim-action-note">タップすると概算内容をコピーし、相談予約ページへ進みます。予約時の備考欄にそのまま貼り付けてご利用ください。</p>
+          <p class="sim-copy-toast" id="sim-copy-toast" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+    .simulator-shell{background:var(--white);border:1px solid var(--pale-mid);border-top:none;border-radius:0 0 14px 14px;padding:24px 22px;position:relative}
+    .sim-accordion{display:grid;gap:14px}
+    .sim-accordion-item{border:1px solid var(--pale-mid);border-radius:14px;background:var(--white);overflow:hidden}
+    .sim-accordion-trigger{width:100%;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:10px;padding:16px 16px;border:none;background:transparent;text-align:left;cursor:pointer}
+    .sim-accordion-step{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}
+    .sim-accordion-title{font-size:14px;font-weight:700;color:var(--navy)}
+    .sim-accordion-summary{font-size:12px;color:var(--ink-light);justify-self:end;text-align:right;line-height:1.5}
+    .sim-accordion-icon{font-size:16px;color:var(--ink-pale);transition:transform .2s ease}
+    .sim-accordion-item.open .sim-accordion-icon{transform:rotate(45deg);color:var(--blue)}
+    .sim-accordion-body{padding:0 16px 16px}
+    .sim-type-btn{display:flex;flex-direction:column;align-items:flex-start;padding:12px 14px;text-align:left;min-width:160px}
+    .sim-type-name{font-size:13px;font-weight:700;line-height:1.4}
+    .sim-type-desc{font-size:11px;color:var(--ink-pale);margin-top:3px;line-height:1.4;font-weight:400}
+    .sim-type-btn.active .sim-type-desc{color:rgba(255,255,255,.78)}
+    .sim-btn-group{display:flex;flex-wrap:wrap;gap:8px}
+    .sim-btn-group--full .sim-btn{flex:1 1 220px}
+    .sim-btn{font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:500;padding:10px 14px;border-radius:10px;border:1.5px solid var(--pale-mid);background:var(--pale);color:var(--ink-mid);cursor:pointer;transition:all .15s}
+    .sim-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .sim-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .sim-qty-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .sim-qty-btn{width:42px;height:42px;border-radius:10px;border:1.5px solid var(--pale-mid);background:var(--pale);font-size:18px;font-weight:500;color:var(--ink-mid);cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:all .15s}
+    .sim-qty-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .sim-qty-display{font-size:24px;font-weight:700;color:var(--navy);min-width:58px;text-align:center}
+    .sim-qty-unit{font-size:14px;font-weight:400;color:var(--ink-light);margin-left:2px}
+    .sim-discount-badge{display:inline-block;background:var(--green-pale);color:var(--green);font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;border:1px solid rgba(22,163,74,.2)}
+    .sim-qty-note{font-size:12px;color:var(--ink-light);margin-top:8px;line-height:1.7;min-height:18px}
+    .sim-check-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+    .sim-check{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--pale-mid);background:var(--pale);cursor:pointer;transition:all .15s}
+    .sim-check:hover{border-color:var(--blue)}
+    .sim-check input{accent-color:var(--blue);width:16px;height:16px;flex-shrink:0;cursor:pointer}
+    .sim-check input:checked~span{color:var(--navy)}
+    .sim-check span{font-size:13px;color:var(--ink-mid);line-height:1.5}
+    .sim-check em{display:block;font-style:normal;font-size:11.5px;color:var(--blue);font-weight:700;margin-top:2px}
+    .sim-result{background:linear-gradient(135deg,#04111f,#0f2a4a);border-radius:14px;padding:22px;margin-top:22px}
+    .sim-result-breakdown{font-size:12.5px;color:rgba(255,255,255,.55);line-height:2.2;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .sim-result-total{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;gap:12px}
+    .sim-result-label{font-size:13px;font-weight:700;color:rgba(255,255,255,.7)}
+    .sim-result-price{font-family:'Noto Serif JP',serif;font-size:32px;font-weight:500;color:#fff}
+    .sim-result-note{font-size:11px;color:rgba(255,255,255,.34);line-height:1.7}
+    .sim-action-wrap{text-align:center;margin-top:18px}
+    .sim-consult-btn{font-size:14px;padding:13px 28px}
+    .sim-action-note{font-size:12px;color:var(--ink-light);line-height:1.8;margin-top:10px}
+    .sim-copy-toast{min-height:18px;font-size:12px;color:var(--blue);font-weight:700;margin-top:8px}
+    .sim-mobile-summary{display:none}
+
+    @media(max-width:680px){
+      .simulator-shell{padding:18px 16px 94px}
+      .sim-accordion{gap:10px}
+      .sim-accordion-trigger{grid-template-columns:auto 1fr auto;gap:8px;padding:14px 14px}
+      .sim-accordion-summary{grid-column:2 / 3;justify-self:start;text-align:left;font-size:11.5px;margin-top:2px}
+      .sim-accordion-title{font-size:13px}
+      .sim-accordion-icon{grid-column:3 / 4;grid-row:1 / span 2;align-self:center}
+      .sim-accordion-body{display:none;padding:0 14px 14px}
+      .sim-accordion-item.open .sim-accordion-body{display:block}
+      .sim-btn-group,.sim-check-group{display:grid;grid-template-columns:1fr}
+      .sim-btn-group--full .sim-btn{width:100%}
+      .sim-btn{font-size:12.5px;padding:11px 12px;text-align:left}
+      .sim-type-btn{min-width:0}
+      .sim-qty-row{gap:10px}
+      .sim-qty-display{font-size:22px}
+      .sim-result{padding:18px;margin-top:18px}
+      .sim-result-breakdown{font-size:12px;line-height:1.95}
+      .sim-result-total{align-items:flex-end}
+      .sim-result-price{font-size:26px}
+      .sim-consult-btn{display:none}
+      .sim-action-note{font-size:11.5px;margin-top:6px}
+      .sim-mobile-summary{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;align-items:center;gap:10px;padding:12px;border-radius:16px;background:rgba(4,17,31,.96);box-shadow:0 18px 40px rgba(15,23,42,.28);border:1px solid rgba(96,165,250,.18);backdrop-filter:blur(8px)}
+      .sim-mobile-summary-meta{display:flex;flex-direction:column;min-width:0}
+      .sim-mobile-summary-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+      .sim-mobile-summary-price{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:500;color:#fff;line-height:1.2}
+      .sim-mobile-summary-btn{flex:1;justify-content:center;padding:12px 16px;font-size:13px;white-space:nowrap;box-shadow:none}
+    }
+
+    @media(min-width:681px){
+      .sim-accordion-body{display:block !important}
+    }
+    </style>
+
+    <script>
+    var simState = {
+      type: 'youtube',
+      duration: 'yt10',
+      reel_talk: 'rt30',
+      reel_quality: 'rq_basic',
+      qty: 1
+    };
+
+    var bookingHref = 'https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing';
+
+    var typeLabels = {
+      youtube:'YouTube（横動画）',
+      reel_talk:'リール・トーク',
+      reel_quality:'リール・クオリティ重視'
+    };
+
+    var basePrices = {
+      yt10:9000, yt15:13500, yt20:18000, yt30:27000, yt45:40500, yt60:54000,
+      rt30:5000, rt60:8000, rt90:10000,
+      rq_basic:10000, rq_rich:15000, rq_promo:20000
+    };
+
+    var baseLabels = {
+      yt10:'YouTube〜10分', yt15:'YouTube〜15分', yt20:'YouTube〜20分',
+      yt30:'YouTube〜30分', yt45:'YouTube〜45分', yt60:'YouTube〜60分',
+      rt30:'トークリール〜30秒', rt60:'トークリール〜60秒', rt90:'トークリール〜90秒',
+      rq_basic:'クオリティリール ベーシック', rq_rich:'クオリティリール リッチ', rq_promo:'クオリティリール プロモ'
+    };
+
+    var optionMeta = [
+      {id:'opt_thumb_simple', label:'サムネイル（静止画）', perUnit:true, price:3000},
+      {id:'opt_thumb_design', label:'サムネイル（デザイン込み）', perUnit:true, price:5000},
+      {id:'opt_planning', label:'企画・構成サポート', perUnit:false, price:5000},
+      {id:'opt_script', label:'台本添削', perUnit:true, price:2000},
+      {id:'opt_consult', label:'運用コンサル（月次）', perUnit:false, price:15000},
+      {id:'opt_express', label:'特急納品（+30%）', perUnit:false, price:0, pct:true}
+    ];
+
+    var setDiscounts = {
+      youtube:[[10,2000],[5,1500],[3,1000]],
+      reel_talk:[[12,1500],[8,1000],[4,500]],
+      reel_quality:[[12,2000],[8,1500],[4,1000]]
+    };
+
+    function toggleSimAccordion(step) {
+      if (window.innerWidth > 680) return;
+      var item = document.getElementById('sim-item-' + step);
+      if (!item) return;
+      item.classList.toggle('open');
+    }
+
+    function openNextAccordion(step) {
+      if (window.innerWidth > 680) return;
+      var current = document.getElementById('sim-item-' + step);
+      var next = document.getElementById('sim-item-' + (step + 1));
+      if (current && next) {
+        current.classList.remove('open');
+        next.classList.add('open');
+      }
+    }
+
+    function syncAccordionMode() {
+      var items = document.querySelectorAll('.sim-accordion-item');
+      if (window.innerWidth > 680) {
+        items.forEach(function(item){ item.classList.add('open'); });
+      } else if (!document.querySelector('.sim-accordion-item.open')) {
+        var first = document.getElementById('sim-item-1');
+        if (first) first.classList.add('open');
+      }
+    }
+
+    function simSelect(key, val, btn) {
+      simState[key] = val;
+      if (key === 'type') {
+        document.getElementById('sim-step2-youtube').style.display = val === 'youtube' ? '' : 'none';
+        document.getElementById('sim-step2-reel-talk').style.display = val === 'reel_talk' ? '' : 'none';
+        document.getElementById('sim-step2-reel-quality').style.display = val === 'reel_quality' ? '' : 'none';
+        simState.duration = 'yt10';
+        simState.reel_talk = 'rt30';
+        simState.reel_quality = 'rq_basic';
+        ['#sim-duration-group','#sim-reel-talk-group','#sim-reel-quality-group'].forEach(function(sel){
+          var grp = document.querySelector(sel);
+          if (!grp) return;
+          grp.querySelectorAll('.sim-btn').forEach(function(b){ b.classList.remove('active'); });
+          var first = grp.querySelector('.sim-btn');
+          if (first) first.classList.add('active');
+        });
+        openNextAccordion(1);
+      }
+      if (btn && btn.closest('.sim-btn-group')) {
+        btn.closest('.sim-btn-group').querySelectorAll('.sim-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+      }
+      if (key === 'duration' || key === 'reel_talk' || key === 'reel_quality') openNextAccordion(2);
+      calcSim();
+    }
+
+    function simChangeQty(delta) {
+      simState.qty = Math.max(1, simState.qty + delta);
+      document.getElementById('sim-qty-num').textContent = simState.qty;
+      calcSim();
+      openNextAccordion(3);
+    }
+
+    function getSetDiscount(type, qty) {
+      var rules = setDiscounts[type] || [];
+      for (var i = 0; i < rules.length; i++) {
+        if (qty >= rules[i][0]) return rules[i][1];
+      }
+      return 0;
+    }
+
+    function getSelectedOptions(qty) {
+      var selected = [];
+      optionMeta.forEach(function(opt){
+        var el = document.getElementById(opt.id);
+        if (!el || !el.checked) return;
+        var cost = opt.pct ? 0 : (opt.perUnit ? opt.price * qty : opt.price);
+        selected.push({
+          id: opt.id,
+          label: opt.label,
+          price: opt.price,
+          cost: cost,
+          perUnit: !!opt.perUnit,
+          pct: !!opt.pct
+        });
+      });
+      return selected;
+    }
+
+    function getSummaryState() {
+      var type = simState.type;
+      var qty = simState.qty;
+      var baseKey = type === 'youtube' ? simState.duration : (type === 'reel_talk' ? simState.reel_talk : simState.reel_quality);
+      var unitPrice = basePrices[baseKey];
+      var label = baseLabels[baseKey];
+      var discPerUnit = getSetDiscount(type, qty);
+      var discAmount = discPerUnit * qty;
+      var baseTotal = unitPrice * qty - discAmount;
+      var discRate = discPerUnit > 0 ? Math.round(discPerUnit / unitPrice * 100) : 0;
+      var selectedOptions = getSelectedOptions(qty);
+      var optTotal = 0;
+      var expressChecked = false;
+      var optionLines = [];
+
+      selectedOptions.forEach(function(opt){
+        if (opt.pct) {
+          expressChecked = true;
+          return;
+        }
+        optTotal += opt.cost;
+        optionLines.push(opt.label + (opt.perUnit && qty > 1 ? '×' + qty + '本' : '') + '　+¥' + opt.cost.toLocaleString());
+      });
+
+      var subtotal = baseTotal + optTotal;
+      var express = expressChecked ? Math.round(subtotal * 0.3) : 0;
+      var total = subtotal + express;
+      var perUnitAfter = unitPrice - discPerUnit;
+
+      return {
+        type: type,
+        qty: qty,
+        baseKey: baseKey,
+        unitPrice: unitPrice,
+        label: label,
+        discPerUnit: discPerUnit,
+        discAmount: discAmount,
+        discRate: discRate,
+        perUnitAfter: perUnitAfter,
+        baseTotal: baseTotal,
+        selectedOptions: selectedOptions,
+        optionLines: optionLines,
+        expressChecked: expressChecked,
+        express: express,
+        total: total
+      };
+    }
+
+    function updateAccordionSummaries(state) {
+      document.getElementById('sim-summary-type').textContent = typeLabels[state.type];
+      document.getElementById('sim-summary-length').textContent = state.label;
+      document.getElementById('sim-summary-qty').textContent = state.qty + '本' + (state.discPerUnit > 0 ? ' / セット割あり' : '');
+      var optionSummary = 'なし';
+      if (state.selectedOptions.length === 1) {
+        optionSummary = state.selectedOptions[0].label;
+      } else if (state.selectedOptions.length === 2) {
+        optionSummary = state.selectedOptions[0].label + ' / ' + state.selectedOptions[1].label;
+      } else if (state.selectedOptions.length > 2) {
+        optionSummary = state.selectedOptions.length + '件選択中';
+      }
+      document.getElementById('sim-summary-options').textContent = optionSummary;
+    }
+
+    function updateBookingText(state) {
+      var optionText = state.selectedOptions.length ? state.selectedOptions.map(function(opt){ return opt.label; }).join('、') : 'なし';
+      var lines = [
+        '【動画編集 ご相談用メモ】',
+        '動画の種類：' + typeLabels[state.type],
+        '内容 / プラン：' + state.label,
+        '依頼本数：' + state.qty + '本',
+        'オプション：' + optionText,
+        '概算合計：¥' + state.total.toLocaleString(),
+        '※ 素材の尺・内容によって変動する場合があります。'
+      ];
+      window.simBookingText = lines.join('
+');
+    }
+
+    function calcSim() {
+      var state = getSummaryState();
+      var badge = document.getElementById('sim-discount-badge');
+      var note = document.getElementById('sim-qty-note');
+
+      if (state.discPerUnit > 0) {
+        badge.style.display = '';
+        badge.textContent = '1本あたり ¥' + state.discPerUnit.toLocaleString() + ' 割引（' + state.discRate + '%off）';
+        note.textContent = state.qty + '本セット：¥' + state.unitPrice.toLocaleString() + '/本 → ¥' + state.perUnitAfter.toLocaleString() + '/本（合計 ¥' + state.baseTotal.toLocaleString() + '）';
+      } else {
+        badge.style.display = 'none';
+        var rules = setDiscounts[state.type] || [];
+        var nextQty = null;
+        for (var r = rules.length - 1; r >= 0; r--) {
+          if (rules[r][0] > state.qty) nextQty = rules[r][0];
+        }
+        if (nextQty) {
+          note.textContent = nextQty + '本以上でセット割引が適用されます';
+        } else {
+          note.textContent = state.qty === 1 ? '2本以上でセット割引が適用されます' : '';
+        }
+      }
+
+      var bd = '<span style="color:rgba(255,255,255,.9);font-weight:500">' + state.label + '</span>';
+      bd += '　¥' + state.unitPrice.toLocaleString() + ' × ' + state.qty + '本';
+      if (state.discAmount > 0) {
+        bd += '<br><span style="color:#86efac">セット割引</span>　−¥' + state.discAmount.toLocaleString();
+        bd += '<br><span style="color:rgba(255,255,255,.6);font-size:11.5px">割引後 1本あたり ¥' + state.perUnitAfter.toLocaleString() + '（' + state.discRate + '%off）</span>';
+      }
+      if (state.optionLines.length > 0) bd += '<br>' + state.optionLines.join('<br>');
+      if (state.expressChecked) bd += '<br>特急納品（+30%）　+¥' + state.express.toLocaleString();
+
+      document.getElementById('sim-breakdown').innerHTML = bd;
+      document.getElementById('sim-total').textContent = '¥' + state.total.toLocaleString();
+      var mobileTotal = document.getElementById('sim-mobile-total');
+      if (mobileTotal) mobileTotal.textContent = '¥' + state.total.toLocaleString();
+
+      updateAccordionSummaries(state);
+      updateBookingText(state);
+    }
+
+    function showSimToast(message) {
+      var toast = document.getElementById('sim-copy-toast');
+      if (!toast) return;
+      toast.textContent = message;
+      clearTimeout(window.simToastTimer);
+      window.simToastTimer = setTimeout(function(){
+        toast.textContent = '';
+      }, 3200);
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try {
+        ok = document.execCommand('copy');
+      } catch (e) {
+        ok = false;
+      }
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    function handleSimBooking(event) {
+      if (event) event.preventDefault();
+      var href = (event && event.currentTarget && event.currentTarget.getAttribute('href')) || bookingHref;
+      var text = window.simBookingText || '';
+      var openBooking = function() {
+        window.open(href, '_blank', 'noopener');
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          showSimToast('概算内容をコピーしました。予約ページの備考欄に貼り付けてご利用ください。');
+          openBooking();
+        }).catch(function(){
+          var copied = fallbackCopy(text);
+          showSimToast(copied ? '概算内容をコピーしました。予約ページへ進みます。' : '予約ページへ進みます。概算内容は画面を見ながらご入力ください。');
+          openBooking();
+        });
+      } else {
+        var copied = fallbackCopy(text);
+        showSimToast(copied ? '概算内容をコピーしました。予約ページへ進みます。' : '予約ページへ進みます。概算内容は画面を見ながらご入力ください。');
+        openBooking();
+      }
+      return false;
+    }
+
+    function switchTab(cat, panel, btn) {
+      document.getElementById(cat + '-tabs').querySelectorAll('.ptab').forEach(function(t){ t.classList.remove('active'); });
+      document.querySelectorAll('[id^="' + cat + '-"]').forEach(function(p){ if (p.classList.contains('ptab-panel')) p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(cat + '-' + panel).classList.add('active');
+    }
+
+    window.addEventListener('resize', syncAccordionMode);
+    syncAccordionMode();
+    calcSim();
+    </script>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  09 PHILOSOPHY — 想いで感情的つながりを作る
+══════════════════════════════════ -->
+<section class="sec phil-sec">
+  <div class="wrap">
+    <p class="eyebrow">編集に込める想い</p>
+    <div class="rule"></div>
+    <h2 class="sec-title" style="text-align:center">動画編集で、<br>関わる全員を幸せに。</h2>
+    <div class="phil-box">
+      <p>
+        クライアント様の想いの詰まった商品・サービスをお客様に届ける
+        <span class="phil-arrow">↓</span>
+        お客様が購入し、理想の未来を手に入れる
+        <span class="phil-arrow">↓</span>
+        クライアント様の売上が上がり、商品・サービスの質がさらに高まる
+        <span class="phil-arrow">↓</span>
+        より多くのお客様を満たすことができる
+      </p>
+    </div>
+    <p class="phil-text">
+      自分含め、関わる全ての人が幸せになれることが一番だと思っています。<br>明確なイメージがなくても、発信ジャンルやコンセプトをもとに動画の構成を考えるお手伝いもさせていただきますので、安心してご相談ください。
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  10 FLOW — 「どうすれば頼めるか」をクリアにする
+══════════════════════════════════ -->
+<section class="sec flow-sec">
+  <div class="wrap">
+    <p class="eyebrow">制作の流れ</p>
+    <div class="rule"></div>
+    <h2 class="sec-title">ご依頼から納品まで</h2>
+    <p class="sec-lead">初めて外注される方でも迷わず進められる流れです。</p>
+    <div class="flow-list">
+      <div class="flow-item"><div class="flow-num">1</div><div class="flow-content"><h4>お問い合わせ</h4><p>メールまたはInstagramのDMからご連絡ください。現状・目標・ご希望をざっくり教えていただくだけでOKです。</p></div></div>
+      <div class="flow-item"><div class="flow-num">2</div><div class="flow-content"><h4>ヒアリング（目的 / 世界観 / 媒体）</h4><p>ZoomまたはDMで、発信の目的・世界観・使用媒体を丁寧にヒアリング。明確なイメージがなくてもOKです。</p></div></div>
+      <div class="flow-item"><div class="flow-num">3</div><div class="flow-content"><h4>プラン提案・お見積もり</h4><p>ヒアリングをもとに最適なプランと料金をご提案します。ご納得いただいてから進みます。</p></div></div>
+      <div class="flow-item"><div class="flow-num">4</div><div class="flow-content"><h4>お支払い</h4><p>単発依頼は前払い・月額契約は月初払いとなります。お支払い確認後に制作を開始します。</p></div></div>
+      <div class="flow-item"><div class="flow-num">5</div><div class="flow-content"><h4>素材のお預かり</h4><p>撮影済みの動画素材をGoogleドライブ等でお送りください。BGMや参考動画があれば一緒にご共有ください。</p></div></div>
+      <div class="flow-item"><div class="flow-num">6</div><div class="flow-content"><h4>初稿提出（3〜5営業日）</h4><p>素材受け取りから3〜5営業日で初稿をご提出します。急ぎの場合は事前にご相談ください。</p></div></div>
+      <div class="flow-item"><div class="flow-num">7</div><div class="flow-content"><h4>修正対応（1回無料）</h4><p>ご確認いただき、気になる点を修正します。初回修正は無料です。</p></div></div>
+      <div class="flow-item"><div class="flow-num">8</div><div class="flow-content"><h4>納品</h4><p>Googleドライブまたはギガファイル便にて納品します。継続契約の場合はそのまま翌月へ。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  11 FAQ — 最後の疑問を取り除く
+══════════════════════════════════ -->
+<section class="sec faq-sec">
+  <div class="wrap">
+    <p class="eyebrow">よくある質問</p>
+    <div class="rule"></div>
+    <h2 class="sec-title">気になることを<br>事前に解消しておきましょう</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-mark">Q</span><span>初めての外注でも大丈夫ですか？</span>
+        </div>
+        <div class="faq-a">はい、むしろ初めての方を歓迎しています。<br>「何を伝えればいいか分からない」という状態でも、<br>ヒアリングで一緒に整理しますので安心してご連絡ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-mark">Q</span><span>修正は何回まで対応してもらえますか？</span>
+        </div>
+        <div class="faq-a">初回修正は無料です。<br>初回のヒアリングで認識のズレをなくすことを大切にしているため、<br>大きな修正が発生するケースはほぼありません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-mark">Q</span><span>納期はどのくらいかかりますか？</span>
+        </div>
+        <div class="faq-a">YouTubeは素材受け取りから通常3〜5営業日、<br>Reelsは1〜3営業日を目安にしています。<br>急ぎの場合はご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-mark">Q</span><span>どんな素材を渡せばいいですか？</span>
+        </div>
+        <div class="faq-a">撮影済みの動画ファイルを<br>GoogleドライブやDropbox等でお送りください。<br>使用したいBGMや参考動画があれば一緒にお知らせください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-mark">Q</span><span>明確な完成イメージがなくても依頼できますか？</span>
+        </div>
+        <div class="faq-a">もちろんです。発信ジャンルやコンセプトをお伝えいただければ、<br>動画の構成・演出を一緒に考えます。<br>「なんとなくこんな雰囲気に」でもOKです。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+  12 FINAL CTA — 行動を促す
+══════════════════════════════════ -->
+<section class="cta-sec">
+  <div class="cta-inner">
+    <!-- timeline deco -->
+    <svg style="display:block;margin:0 auto 36px" width="96" height="64" viewBox="0 0 96 64" fill="none" aria-hidden="true">
+      <rect x="14" y="14" width="68" height="38" rx="4" fill="rgba(255,255,255,.07)" stroke="rgba(147,197,253,.4)" stroke-width="1.3"/>
+      <rect x="18" y="18" width="60" height="30" rx="2" fill="rgba(255,255,255,.05)"/>
+      <rect x="22" y="22" width="52" height="5" rx="2" fill="rgba(147,197,253,.22)"/>
+      <rect x="22" y="30" width="36" height="5" rx="2" fill="rgba(147,197,253,.15)"/>
+      <rect x="22" y="38" width="44" height="5" rx="2" fill="rgba(147,197,253,.1)"/>
+      <line x1="50" y1="20" x2="50" y2="46" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+      <polygon points="47,20 53,20 50,16" fill="#60a5fa"/>
+      <line x1="6" y1="52" x2="90" y2="52" stroke="rgba(147,197,253,.3)" stroke-width="1.3" stroke-linecap="round"/>
+      <line x1="24" y1="52" x2="28" y2="58" stroke="rgba(147,197,253,.25)" stroke-width="1.1"/>
+      <line x1="72" y1="52" x2="68" y2="58" stroke="rgba(147,197,253,.25)" stroke-width="1.1"/>
+      <circle cx="12" cy="10" r="1.8" fill="#60a5fa" opacity=".55"/>
+      <circle cx="83" cy="7" r="2.2" fill="#60a5fa" opacity=".35"/>
+      <circle cx="71" cy="12" r="1.4" fill="#60a5fa" opacity=".45"/>
+    </svg>
+
+    <h2>あなたの発信が<br><em>届き、行動につながる</em><br>動画を一緒に作りましょう。</h2>
+    <p>安さではなく成果で選びたい方へ。<br>まずは現状のお悩みをお気軽にお聞かせください。</p>
+    <div class="btn-group" style="justify-content:center">
+      <a href="https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing" target="_blank" class="btn btn--primary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/></svg>
+        編集を依頼する
+      </a>
+      <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" class="btn btn--ghost" style="background:transparent;color:#93c5fd;border-color:rgba(147,197,253,.4)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.217.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6.406-11.845a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+        Instagramでも受付
+      </a>
+    </div>
+    <p class="cta-sub">返信は基本24時間以内 ・ まずはご相談だけでもOK</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">プライバシーポリシー</a>
+    <a href="https://www.instagram.com/hitoshi_editor/" target="_blank">Instagram</a>
+  </div>
+  <p class="footer-copy">© 2025 吉岡ひとし 動画編集</p>
+</footer>
+
+<script>
+function switchSolve(id, btn) {
+  document.querySelectorAll('.solve-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.solve-panel').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('solve-' + id).classList.add('active');
+}
+</script>
+</body>
+</html>
