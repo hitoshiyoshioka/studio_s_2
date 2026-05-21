@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="コーチ・コンサル・講座運営者向けの動画編集サービス。YouTube・リール編集をまるっと任せて、発信と本業に集中できる毎日へ。">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="Studio S｜動画編集をまるっと任せられるサービス">
+<meta property="og:description" content="YouTube・リール編集、台本作成、改善提案まで。発信を続けたい方のための動画編集サポート。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12BFEA">
+<title>Studio S｜動画編集をまるっと任せられるサービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#12BFEA;
+  --sky-dark:#0796C4;
+  --sky-deep:#047EA6;
+  --sky-light:#DDF8FF;
+  --sky-pale:#F3FCFF;
+  --navy:#173244;
+  --navy-soft:#27465A;
+  --ink:#1B2F3C;
+  --ink-mid:#526B7A;
+  --ink-pale:#8EA4AF;
+  --border:#CDEEF7;
+  --white:#FFFFFF;
+  --bg:#F4FCFF;
+  --gold:#D69A2D;
+  --gold-bg:#FFF6E5;
+  --shadow:0 12px 34px rgba(7,150,196,.12);
+  --shadow-soft:0 8px 24px rgba(23,50,68,.07);
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased;padding-bottom:82px}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}.serif{font-family:'Noto Serif JP',serif}[id]{scroll-margin-top:86px}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(205,238,247,.9);box-shadow:0 6px 22px rgba(23,50,68,.05)}
+.header-inner{height:58px;display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:1080px;margin:0 auto;padding:0 18px}.logo{font-size:16px;font-weight:900;color:var(--navy);letter-spacing:.08em}.logo span{color:var(--sky)}.header-btn{background:var(--navy);color:#fff;border-radius:999px;padding:9px 15px;font-size:12px;font-weight:900;white-space:nowrap}.nav{display:flex;gap:8px;overflow-x:auto;padding:0 18px 12px;background:rgba(255,255,255,.94);scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{flex:0 0 auto;padding:6px 11px;border-radius:999px;border:1px solid var(--border);background:var(--sky-pale);color:var(--sky-deep);font-size:11px;font-weight:900}
+
+/* BUTTON */
+.btn-row{display:grid;gap:10px}.btn{min-height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:9px;padding:0 20px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-soft);font-weight:900;font-size:13px;color:var(--navy);transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--sky);color:#fff;border-color:var(--sky);box-shadow:0 12px 24px rgba(18,191,234,.24)}.btn-dark{background:var(--navy);color:#fff;border-color:var(--navy)}.btn-icon{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:var(--sky-pale);color:var(--sky-deep);font-size:12px}.btn-primary .btn-icon{background:rgba(255,255,255,.2);color:#fff}.btn-dark .btn-icon{background:rgba(255,255,255,.16);color:#fff}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#FFFFFF 0%,#F0FBFF 100%);padding:46px 0 38px}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 15%,rgba(18,191,234,.15),transparent 22rem),radial-gradient(circle at 86% 12%,rgba(18,191,234,.12),transparent 20rem)}.hero .wrap{position:relative;z-index:1}.hero-grid{display:grid;gap:24px;align-items:center}.hero-copy{text-align:center}.hero-eyebrow{display:inline-block;border:1px solid var(--border);background:#fff;color:var(--sky-dark);font-size:12px;font-weight:900;padding:5px 15px;border-radius:999px;margin-bottom:16px;box-shadow:0 8px 20px rgba(7,150,196,.09)}.hero-title{font-family:'Noto Serif JP',serif;font-size:clamp(28px,7.4vw,44px);line-height:1.48;font-weight:600;color:var(--navy);letter-spacing:.02em;margin-bottom:14px}.hero-title .blue{color:var(--sky-deep);font-weight:700}.hero-sub{font-size:14px;color:var(--ink-mid);line-height:1.95;font-weight:600;margin-bottom:24px}.hero-media{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}.hero-photo{position:relative;overflow:hidden;border-radius:24px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow)}.hero-photo img{width:100%;height:100%;min-height:190px;object-fit:cover}.hero-photo::after{content:attr(data-label);position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border:1px solid rgba(205,238,247,.9);border-radius:999px;padding:5px 10px;color:var(--navy);font-size:10px;font-weight:900}.stamp{display:none}.hero-cta{max-width:720px;margin:22px auto 0}.hero-note{font-size:11px;color:var(--ink-pale);margin-top:10px;text-align:center}
+
+/* COMMON */
+.sec{padding:56px 0;background:#fff}.sec-soft{background:linear-gradient(180deg,#F8FDFF 0%,#EEF9FE 100%)}.sec-blue{background:linear-gradient(180deg,#EAFBFF 0%,#F8FDFF 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.section-head{text-align:center;margin-bottom:28px}.eyebrow{display:inline-block;font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--sky-dark);background:#EAF9FE;border:1px solid var(--border);padding:4px 12px;border-radius:999px;margin-bottom:12px}.sec-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,5.6vw,34px);font-weight:600;color:var(--navy);line-height:1.55;letter-spacing:.02em}.sec-title .blue{color:var(--sky-deep);font-weight:700}.sec-lead{max-width:720px;margin:10px auto 0;color:var(--ink-mid);font-size:14px;line-height:1.95}
+
+/* TROUBLE */
+.trouble-grid{display:grid;grid-template-columns:1fr;gap:14px}.trouble-card{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-soft);overflow:hidden}.trouble-card img{width:100%;aspect-ratio:4/3;object-fit:cover}.trouble-body{padding:15px}.trouble-title{color:var(--sky-deep);font-size:14px;font-weight:900;margin-bottom:5px}.trouble-text{font-size:12.5px;color:var(--ink-mid);line-height:1.8}
+
+/* SOLUTION */
+.solution{display:grid;grid-template-columns:1fr;gap:22px;align-items:center}.solution-panel{background:linear-gradient(135deg,#FFFFFF 0%,#F4FCFF 100%);border:1px solid var(--border);border-radius:24px;padding:22px;box-shadow:var(--shadow)}.solution-list{display:grid;gap:14px;margin-top:18px}.solution-item{display:grid;grid-template-columns:28px 1fr;gap:10px}.check{width:28px;height:28px;border-radius:50%;background:var(--sky);color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900}.solution-item h3{font-size:14px;color:var(--navy);font-weight:900;margin-bottom:2px}.solution-item p{font-size:12.5px;color:var(--ink-mid);line-height:1.8}.solution-img{background:#fff;border:1px solid var(--border);border-radius:24px;padding:10px;box-shadow:var(--shadow)}.solution-img img{border-radius:18px;width:100%;object-fit:cover}
+
+/* PRICE */
+.price-grid{display:grid;grid-template-columns:1fr;gap:16px}.price-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;padding:22px}.price-card.recommend{border:2px solid var(--sky)}.price-card.gold{border-color:#E9C986;background:linear-gradient(180deg,#FFFFFF 0%,#FFF9ED 100%)}.plan-chip{display:inline-block;border-radius:999px;padding:5px 13px;background:var(--sky-light);color:var(--sky-deep);font-size:11px;font-weight:900;margin-bottom:10px}.gold .plan-chip{background:#FFE8B6;color:#9A6200}.ribbon{position:absolute;top:14px;right:-34px;transform:rotate(34deg);background:var(--orange);color:#fff;font-size:10px;font-weight:900;padding:4px 34px}.price-card h3{font-size:22px;color:var(--navy);font-weight:900;text-align:center;margin-bottom:8px}.price-desc{text-align:center;font-size:12.5px;color:var(--ink-mid);line-height:1.8;margin-bottom:14px}.price-main{text-align:center;font-family:'Noto Serif JP',serif;font-size:38px;color:var(--sky-deep);font-weight:700;line-height:1.15;margin-bottom:16px}.gold .price-main{color:#9A6200}.price-main small{font-family:'Noto Sans JP',sans-serif;font-size:13px;color:var(--ink-pale);font-weight:900}.feature-list{list-style:none;display:grid;gap:8px;margin-top:14px}.feature-list li{display:flex;gap:8px;font-size:12.5px;color:var(--ink);line-height:1.75}.feature-list li::before{content:'✓';flex:0 0 auto;color:var(--sky-deep);font-weight:900}.gold .feature-list li::before{color:#9A6200}.plan-btn{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:18px;border-radius:999px;background:var(--sky-pale);border:1px solid var(--border);color:var(--sky-deep);font-size:13px;font-weight:900}.recommend .plan-btn{background:var(--sky);color:#fff;border-color:var(--sky)}.gold .plan-btn{background:#9A6200;color:#fff;border-color:#9A6200}.price-note{text-align:center;font-size:11px;color:var(--ink-pale);margin-top:12px;line-height:1.7}
+
+/* SERVICE ICONS */
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.service-item{text-align:center}.service-img{width:86px;height:86px;border-radius:50%;margin:0 auto 10px;overflow:hidden;border:4px solid #fff;box-shadow:var(--shadow);background:#fff}.service-img img{width:100%;height:100%;object-fit:cover}.service-title{font-size:12.5px;color:var(--navy);font-weight:900;line-height:1.5}
+
+/* SET / OPTION */
+.set-grid{display:grid;grid-template-columns:1fr;gap:14px}.set-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:18px;box-shadow:var(--shadow-soft)}.set-card h3{font-size:16px;color:var(--navy);font-weight:900;margin-bottom:10px}.set-row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #EAF6FA;font-size:12.5px}.set-row:last-child{border-bottom:0}.set-row strong{color:var(--navy);white-space:nowrap}.set-row span{color:var(--ink-mid);text-align:right}.option-grid{display:grid;grid-template-columns:1fr;gap:12px}.option-item{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:18px;padding:15px;box-shadow:var(--shadow-soft)}.option-item h3{font-size:14px;color:var(--navy);font-weight:900;margin-bottom:3px}.option-item p{font-size:12px;color:var(--ink-mid);line-height:1.7}.option-price{flex:0 0 auto;color:var(--sky-dark);font-size:13px;font-weight:900;text-align:right;white-space:nowrap}
+
+/* FLOW */
+.flow-grid{display:grid;grid-template-columns:1fr;gap:12px}.flow-card{display:grid;grid-template-columns:42px 1fr;gap:12px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:15px;box-shadow:var(--shadow-soft)}.flow-num{width:42px;height:42px;border-radius:50%;background:var(--sky);color:#fff;display:grid;place-items:center;font-weight:900}.flow-card h3{font-size:14px;color:var(--navy);font-weight:900;margin-bottom:3px}.flow-card p{font-size:12.5px;color:var(--ink-mid);line-height:1.8}
+
+/* FAQ / CTA */
+.faq-list{display:grid;gap:10px}.faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-soft)}details{background:#fff}summary{cursor:pointer;padding:14px 16px;font-size:13px;font-weight:900;color:var(--navy);list-style:none}summary::-webkit-details-marker{display:none}details p{padding:0 16px 14px;font-size:12.5px;color:var(--ink-mid);line-height:1.85}.final-cta{background:linear-gradient(160deg,var(--navy),var(--sky-dark));padding:48px 0;text-align:center}.final-cta h2{font-family:'Noto Serif JP',serif;color:#fff;font-size:clamp(20px,5vw,30px);font-weight:600;line-height:1.55;margin-bottom:10px}.final-cta p{font-size:13px;color:rgba(255,255,255,.9);line-height:1.9;margin-bottom:24px}.final-cta-btns{display:flex;flex-direction:column;gap:10px;align-items:center}footer{background:var(--navy);padding:24px 0;text-align:center}footer p{font-size:11px;color:rgba(255,255,255,.42);margin-top:10px}.footer-links{display:flex;justify-content:center;gap:20px}.footer-links a{font-size:11px;color:rgba(255,255,255,.62)}.fixed-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid var(--border);box-shadow:0 18px 44px rgba(15,23,42,.20);backdrop-filter:blur(12px)}.fixed-cta a{min-height:42px;display:grid;place-items:center;border-radius:999px;font-size:12px;font-weight:900}.fixed-cta .ghost{background:var(--sky-pale);color:var(--sky-deep)}.fixed-cta .solid{background:var(--sky);color:#fff}
+
+@media(min-width:720px){body{padding-bottom:0}.nav{justify-content:center}.btn-row,.hero-btns,.final-cta-btns{display:flex;justify-content:center}.btn{width:auto;min-width:220px}.hero{padding:72px 0 58px}.hero-grid{grid-template-columns:.88fr 1.24fr .88fr;gap:24px}.hero-copy{grid-column:2;text-align:center}.hero-media{grid-column:1/4;grid-row:1;grid-template-columns:1fr .9fr;gap:28px}.hero-photo img{min-height:310px}.stamp{display:grid;position:absolute;right:22%;top:45%;width:116px;height:116px;border-radius:50%;background:#fff;border:2px solid var(--sky-light);place-items:center;text-align:center;color:var(--sky-deep);font-weight:900;font-size:12px;box-shadow:var(--shadow);z-index:2}.trouble-grid{grid-template-columns:repeat(4,1fr)}.solution{grid-template-columns:1fr 1fr}.price-grid{grid-template-columns:repeat(3,1fr)}.service-grid{grid-template-columns:repeat(6,1fr)}.set-grid{grid-template-columns:repeat(3,1fr)}.option-grid{grid-template-columns:repeat(2,1fr)}.flow-grid{grid-template-columns:repeat(5,1fr)}.flow-card{display:block;text-align:center}.flow-num{margin:0 auto 10px}.fixed-cta{display:none}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a href="#top" class="logo">Studio <span>S</span></a>
+    <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="header-btn">無料相談</a>
+  </div>
+  <nav class="nav" aria-label="ページ内メニュー">
+    <a href="#trouble">悩み</a>
+    <a href="#solution">解決</a>
+    <a href="#price">料金</a>
+    <a href="#service">できること</a>
+    <a href="#flow">流れ</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-media">
+        <div class="hero-photo" data-label="依頼前：編集に追われる毎日">
+          <img src="assets/client-before-busy.png" alt="動画編集に悩む女性クライアント">
+        </div>
+        <div class="hero-photo" data-label="編集者：まるっとサポート">
+          <img src="assets/editor-support-male.png" alt="男性編集者による動画編集サポート">
+        </div>
+        <div class="stamp">Studio S<br>動画編集<br>吉岡ひとし</div>
+      </div>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">コーチ・コンサル・講座運営者向け</p>
+        <h1 class="hero-title">動画編集を“丸投げ”して<br><span class="blue">発信に集中できる毎日へ</span></h1>
+        <p class="hero-sub">YouTube・リール編集をまるっとお任せ。<br>あなたの想いが伝わる動画をお届けします。</p>
+        <div class="btn-row">
+          <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><span class="btn-icon">IG</span>Instagramで相談する</a>
+          <a href="https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing" target="_blank" rel="noopener noreferrer" class="btn"><span class="btn-icon">予</span>日程を予約して相談する</a>
+          <a href="https://fori.io/studio-s" target="_blank" rel="noopener noreferrer" class="btn"><span class="btn-icon">実</span>実績を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trouble" class="sec">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">PROBLEM</p>
+        <h2 class="sec-title">こんなお悩みありませんか？</h2>
+      </div>
+      <div class="trouble-grid">
+        <article class="trouble-card"><img src="assets/problem-editing-time.png" alt="編集に時間がかかる女性クライアント"><div class="trouble-body"><h3 class="trouble-title">編集に時間がかかりすぎる</h3><p class="trouble-text">本業やお客さま対応の時間が削られてしまう。</p></div></article>
+        <article class="trouble-card"><img src="assets/problem-quality.png" alt="編集クオリティに不安がある女性クライアント"><div class="trouble-body"><h3 class="trouble-title">編集スキルに自信がない</h3><p class="trouble-text">見やすくまとめるのが難しく、クオリティにばらつきが出る。</p></div></article>
+        <article class="trouble-card"><img src="assets/problem-continuity.png" alt="継続して発信できない悩み"><div class="trouble-body"><h3 class="trouble-title">継続的に発信できない</h3><p class="trouble-text">編集が負担で、投稿頻度が落ちてしまう。</p></div></article>
+        <article class="trouble-card"><img src="assets/problem-who-to-ask.png" alt="どこに頼めばいいか迷う女性クライアント"><div class="trouble-body"><h3 class="trouble-title">どこに頼めばいいか迷う</h3><p class="trouble-text">誰に頼めばいいか分からず、一歩が踏み出せない。</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution" class="sec-blue sec">
+    <div class="wrap solution">
+      <div class="solution-panel">
+        <p class="eyebrow">SOLUTION</p>
+        <h2 class="sec-title">そのお悩み、<br>Studio Sがすべて<span class="blue">解決</span>します</h2>
+        <div class="solution-list">
+          <div class="solution-item"><div class="check">✓</div><div><h3>本業に集中できる時間が増える</h3><p>編集はすべてお任せ。あなたは本業やお客さま対応に専念できます。</p></div></div>
+          <div class="solution-item"><div class="check">✓</div><div><h3>伝わる・見やすい動画で印象が整う</h3><p>視聴者目線で構成・編集し、あなたの想いをしっかり届けます。</p></div></div>
+          <div class="solution-item"><div class="check">✓</div><div><h3>発信が習慣化し、集客につながる</h3><p>継続できる仕組みで、見込み客との接点作りをサポートします。</p></div></div>
+        </div>
+      </div>
+      <div class="solution-img">
+        <img src="assets/after-family-time.png" alt="動画編集を任せて家族との時間が増えた女性クライアント">
+      </div>
+    </div>
+  </section>
+
+  <section id="price" class="sec">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">PRICE</p>
+        <h2 class="sec-title">料金プラン</h2>
+      </div>
+      <div class="price-grid">
+        <article class="price-card">
+          <span class="plan-chip">まずは気軽に始めたい方へ</span>
+          <h3>ベーシックプラン</h3>
+          <p class="price-desc">リール・YouTubeの基本編集プラン</p>
+          <div class="price-main">5,000<small>円 / 本〜</small></div>
+          <ul class="feature-list"><li>カット編集・テロップ挿入</li><li>BGM・効果音</li><li>量産向けのシンプル編集</li><li>修正対応あり</li></ul>
+          <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="plan-btn">このプランで依頼する</a>
+        </article>
+        <article class="price-card recommend">
+          <div class="ribbon">おすすめ</div>
+          <span class="plan-chip">しっかり発信を続けたい方へ</span>
+          <h3>リッチプラン</h3>
+          <p class="price-desc">構成からお任せできる充実プラン</p>
+          <div class="price-main">8,000<small>円 / 本〜</small></div>
+          <ul class="feature-list"><li>ベーシック内容すべて</li><li>構成サポート</li><li>サムネイル作成対応</li><li>見やすさ・世界観を重視</li></ul>
+          <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="plan-btn">このプランで依頼する</a>
+        </article>
+        <article class="price-card gold">
+          <span class="plan-chip">まとめてお任せしたい方へ</span>
+          <h3>月額おまかせプラン</h3>
+          <p class="price-desc">継続発信をトータルでサポート</p>
+          <div class="price-main">49,800<small>円 / 月〜</small></div>
+          <ul class="feature-list"><li>月4本または月8本制作</li><li>企画・台本作成</li><li>撮影サポート</li><li>改善提案つき</li></ul>
+          <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="plan-btn">このプランで依頼する</a>
+        </article>
+      </div>
+      <p class="price-note">※ 素材の長さ・内容によって料金が変動する場合があります。まずはお気軽にご相談ください。</p>
+    </div>
+  </section>
+
+  <section id="service" class="sec-blue sec">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">SERVICE</p>
+        <h2 class="sec-title">Studio Sに丸投げできること</h2>
+      </div>
+      <div class="service-grid">
+        <div class="service-item"><div class="service-img"><img src="assets/service-cut.png" alt="カット編集"></div><p class="service-title">カット編集</p></div>
+        <div class="service-item"><div class="service-img"><img src="assets/service-telop.png" alt="テロップ・字幕挿入"></div><p class="service-title">テロップ・字幕挿入</p></div>
+        <div class="service-item"><div class="service-img"><img src="assets/service-bgm.png" alt="BGM・効果音"></div><p class="service-title">BGM・効果音</p></div>
+        <div class="service-item"><div class="service-img"><img src="assets/service-color.png" alt="色調補正・画像挿入"></div><p class="service-title">色調補正・画像挿入</p></div>
+        <div class="service-item"><div class="service-img"><img src="assets/service-thumbnail.png" alt="サムネイル作成"></div><p class="service-title">サムネイル作成</p></div>
+        <div class="service-item"><div class="service-img"><img src="assets/service-planning.png" alt="構成サポート"></div><p class="service-title">構成サポート</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="set" class="sec">
+    <div class="wrap">
+      <div class="section-head"><p class="eyebrow">SET PLAN</p><h2 class="sec-title">継続向けセット</h2><p class="sec-lead">定期的に投稿したい方は、セット依頼がおすすめです。</p></div>
+      <div class="set-grid">
+        <article class="set-card"><h3>量産トークリール</h3><div class="set-row"><strong>4本</strong><span>18,000円 / 1本4,500円</span></div><div class="set-row"><strong>8本</strong><span>34,000円 / 1本4,250円</span></div><div class="set-row"><strong>12本</strong><span>48,000円 / 1本4,000円</span></div></article>
+        <article class="set-card"><h3>世界観重視リール</h3><div class="set-row"><strong>4本</strong><span>30,000円 / 1本7,500円</span></div><div class="set-row"><strong>8本</strong><span>56,000円 / 1本7,000円</span></div><div class="set-row"><strong>12本</strong><span>78,000円 / 1本6,500円</span></div></article>
+        <article class="set-card"><h3>YouTubeセット</h3><div class="set-row"><strong>3本</strong><span>5%OFF</span></div><div class="set-row"><strong>5本</strong><span>10%OFF</span></div><div class="set-row"><strong>10本</strong><span>15%OFF</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" class="sec sec-soft">
+    <div class="wrap">
+      <div class="section-head"><p class="eyebrow">FLOW</p><h2 class="sec-title">ご依頼の流れ</h2></div>
+      <div class="flow-grid">
+        <article class="flow-card"><div class="flow-num">1</div><div><h3>お問い合わせ</h3><p>Instagramまたは予約フォームからご連絡ください。</p></div></article>
+        <article class="flow-card"><div class="flow-num">2</div><div><h3>ヒアリング</h3><p>目的やご希望を伺い、最適なプランをご提案します。</p></div></article>
+        <article class="flow-card"><div class="flow-num">3</div><div><h3>素材のご共有</h3><p>動画・画像・台本などの素材をお送りいただきます。</p></div></article>
+        <article class="flow-card"><div class="flow-num">4</div><div><h3>編集・確認</h3><p>編集後、ご確認いただき修正対応します。</p></div></article>
+        <article class="flow-card"><div class="flow-num">5</div><div><h3>納品・公開サポート</h3><p>納品後の公開や活用方法もサポートします。</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="option">
+    <div class="wrap">
+      <div class="section-head"><p class="eyebrow">OPTION</p><h2 class="sec-title">オプション</h2></div>
+      <div class="option-grid">
+        <article class="option-item"><div><h3>出張撮影</h3><p>撮影時間・場所・必要機材により変動。交通費別途。</p></div><div class="option-price">20,000円〜</div></article>
+        <article class="option-item"><div><h3>サムネイル制作</h3><p>YouTubeや告知用に対応。</p></div><div class="option-price">3,000〜5,000円</div></article>
+        <article class="option-item"><div><h3>企画・台本作成</h3><p>単品・セットにも追加可能。</p></div><div class="option-price">5,000円〜/本</div></article>
+        <article class="option-item"><div><h3>分析・改善提案</h3><p>投稿後の反応を見ながら改善点をご提案。</p></div><div class="option-price">月20,000円〜</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="contact">
+    <div class="wrap">
+      <h2>まずは無料でご相談ください。</h2>
+      <p>あなたの発信を、動画の力で加速させます。</p>
+      <div class="final-cta-btns">
+        <a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><span class="btn-icon">IG</span>Instagramで相談する</a>
+        <a href="https://www.jicoo.com/t/izyz9ijHaVBi/e/outsourcing" target="_blank" rel="noopener noreferrer" class="btn"><span class="btn-icon">予</span>日程を予約して相談する</a>
+        <a href="https://fori.io/studio-s" target="_blank" rel="noopener noreferrer" class="btn"><span class="btn-icon">実</span>実績を見る</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links"><a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://fori.io/studio-s" target="_blank" rel="noopener noreferrer">制作実績</a></div>
+  <p>© 2026 Studio S / 吉岡ひとし</p>
+</footer>
+<div class="fixed-cta"><a href="#price" class="ghost">料金を見る</a><a href="https://www.instagram.com/hitoshi_editor/" target="_blank" rel="noopener noreferrer" class="solid">DMで相談</a></div>
+</body>
+</html>
